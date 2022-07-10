@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import process from 'process';
+import { validateQuestionFiles } from './validation/validateQuestionFiles';
 import { validateCourseFile } from './validation/validateCourseFile';
 
 const program = new Command();
@@ -7,6 +8,7 @@ const program = new Command();
 export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   validateCourseFile(`${courseDirPath}/course.yaml`);
+  validateQuestionFiles(`${courseDirPath}/questions`);
 }
 
 program

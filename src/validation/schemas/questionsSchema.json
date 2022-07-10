@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "hint": {
+          "type": "string"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "answerKeys": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "topic": {
+          "type": "string"
+        },
+        "sub_topics": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "difficulty_level": {
+          "type": "string"
+        },
+        "choices": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "content",
+                "key",
+                "order"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "content",
+                "key",
+                "order"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "content",
+                "key",
+                "order"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "content",
+                "key",
+                "order"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "uuid",
+        "type",
+        "content",
+        "hint",
+        "explanation",
+        "answerKeys",
+        "topic",
+        "sub_topics",
+        "difficulty_level",
+        "choices"
+      ]
+    }
+  ]
+}

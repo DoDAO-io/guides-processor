@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { throwValidationError } from './throwValidationError';
 import YAML from 'yaml';
 import { Validator } from 'jsonschema';
 import courseFileSchema from './schemas/courseFileSchema.json';
@@ -10,7 +11,7 @@ export function validateCourseFile(courseFilePath: string) {
   const res = v.validate(courseJson, courseFileSchema);
   console.log('res.valid', res.valid);
   if (!res.valid) {
-    throw new Error(JSON.stringify(res.errors, null, 2));
+    throwValidationError(courseFilePath, res.errors);
   }
 
   console.log(JSON.stringify(courseJson, null, 2));
