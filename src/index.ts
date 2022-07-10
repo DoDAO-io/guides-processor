@@ -7,8 +7,10 @@ const program = new Command();
 
 export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
+  console.log('Validating Course...');
   validateCourseFile(`${courseDirPath}/course.yaml`);
   validateQuestionFiles(`${courseDirPath}/questions`);
+  console.log('Congrats! Everything looks good!');
 }
 
 program

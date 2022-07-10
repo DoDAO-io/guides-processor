@@ -9,10 +9,7 @@ export function validateCourseFile(courseFilePath: string) {
   const courseJson = YAML.parse(file);
   const v = new Validator();
   const res = v.validate(courseJson, courseFileSchema);
-  console.log('res.valid', res.valid);
   if (!res.valid) {
     throwValidationError(courseFilePath, res.errors);
   }
-
-  console.log(JSON.stringify(courseJson, null, 2));
 }
