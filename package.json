@@ -17,7 +17,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build && echo '#!/usr/bin/env node\\n' \"$(cat dist/index.js)\" > dist/index.js",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "generate-all": "dist/index.js  gen-all test/dummy-course/src"
   },
   "peerDependencies": {},
   "husky": {
