@@ -46,6 +46,7 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/jsonschema": "^1.1.1",
     "husky": "^8.0.1",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
@@ -54,6 +55,8 @@
   },
   "dependencies": {
     "@types/commander": "^2.12.2",
-    "commander": "^9.3.0"
+    "commander": "^9.3.0",
+    "jsonschema": "^1.4.1",
+    "yaml": "^2.1.1"
   }
 }

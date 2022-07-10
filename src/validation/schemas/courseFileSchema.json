@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "string"
+            },
+            "readings": {
+              "type": "string"
+            },
+            "summaries": {
+              "type": "string"
+            },
+            "questions": {
+              "type": "string"
+            },
+            "order": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "title",
+            "summary",
+            "readings",
+            "summaries",
+            "questions",
+            "order"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "summary": {
+              "type": "string"
+            },
+            "readings": {
+              "type": "string"
+            },
+            "summaries": {
+              "type": "string"
+            },
+            "questions": {
+              "type": "string"
+            },
+            "order": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "title",
+            "summary",
+            "readings",
+            "summaries",
+            "questions",
+            "order"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "summary",
+    "description",
+    "duration",
+    "topics"
+  ]
+}

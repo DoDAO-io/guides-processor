@@ -1,7 +1,10 @@
-title:
-summary:
-description:
-duration:
+title: Dummy Course
+summary: This is a Dummy Course that is used for validation
+description:  | 
+  "Line1" 
+  "Line2" 
+  "Line3"
+duration: 45 - 60 mins
 topics:
   - title: Blockchain Basics
     summary: This chapter explains the basics of blockchian
@@ -12,12 +15,6 @@ topics:
   - title: First Smart Contract
     summary: A minimal smart contract that gives a peek into what smart contracts are and how are they written and deployed
     readings: first_smart_contract.yaml
-    summaries:
-    questions:
-    order:
-  - title:
-    summary:
-    readings:
-    summaries:
-    questions:
-    order:
+    summaries: first_smart_contract.yaml
+    questions: first_smart_contract.yaml
+    order: 1

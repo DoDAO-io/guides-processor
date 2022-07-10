@@ -18,6 +18,10 @@ To do a one-off build, use `npm run build` or `yarn build`.
 
 To run tests, use `npm test` or `yarn test`.
 
+## Publishing to NPM
+
+We recommend using [np](https://github.com/sindresorhus/np).
+
 ## Configuration
 
 Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
