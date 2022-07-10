@@ -1,14 +1,8 @@
-import { validateCourseFile } from './validation/validateCourseFile';
 import { Command } from 'commander';
+import process from 'process';
+import { validateCourseFile } from './validation/validateCourseFile';
 
 const program = new Command();
-
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('boop');
-  }
-  return a + b;
-};
 
 export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
