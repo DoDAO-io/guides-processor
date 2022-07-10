@@ -23,7 +23,6 @@ program
   .description('Generates both the markdown and JSON metadata for the course')
   .argument('<path>', 'path of the course folder')
   .action(async path => {
-    console.log('str', path);
     validateFiles(path);
   });
 
