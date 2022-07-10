@@ -31,7 +31,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "course-processor",
+  "name": "dodao-course-processor",
   "author": "robin",
   "module": "dist/course-processor.esm.js",
   "size-limit": [
