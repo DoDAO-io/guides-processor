@@ -34,7 +34,7 @@
   "name": "dodao-course-processor",
   "author": "robin",
   "bin": {
-    "dodao-course-processor": "dist/dodao-course-processor.cjs.development.js"
+    "dodao-course-processor": "dist/dodao-course-processor.esm.js"
   },
   "module": "dist/course-processor.esm.js",
   "size-limit": [
