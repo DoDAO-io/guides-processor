@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && echo '#!/usr/bin/env node\\n' \"$(cat dist/index.js)\" > dist/index.js",
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -34,7 +34,7 @@
   "name": "dodao-course-processor",
   "author": "robin",
   "bin": {
-    "dodao-course-processor": "dist/dodao-course-processor.esm.js"
+    "dodao-course-processor": "dist/index.js"
   },
   "module": "dist/course-processor.esm.js",
   "size-limit": [
