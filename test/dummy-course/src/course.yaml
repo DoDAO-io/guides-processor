@@ -18,6 +18,8 @@ topics:
     summaries: blockchian_basics.yaml
     questions: blockchian_basics.yaml
     order: 0
+    status: In Progress
+    completionWeek:  July 18
   - title: Decentralized Finance
     key: decentralized-finance
     summary: Explain on a high level what is decentralized finance
@@ -28,3 +30,5 @@ topics:
     summaries: cfi_vs_defi.yaml
     questions: cfi_vs_defi.yaml
     order: 1
+    status: In Progress
+    completionWeek: July 18
