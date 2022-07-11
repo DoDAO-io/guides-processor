@@ -4,6 +4,7 @@ import { validateSummariesFiles } from './validation/validateSummariesFiles';
 import { validateReadingsFiles } from './validation/validateReadingsFiles';
 import { validateQuestionFiles } from './validation/validateQuestionFiles';
 import { validateCourseFile } from './validation/validateCourseFile';
+import { validateUniqueUUIDs } from './validation/validateUniqueUUIDs';
 
 const program = new Command();
 
@@ -14,6 +15,11 @@ export function validateFiles(srcPath: string) {
   validateSummariesFiles(`${courseDirPath}/summaries`);
   validateQuestionFiles(`${courseDirPath}/questions`);
   validateReadingsFiles(`${courseDirPath}/readings`);
+  validateUniqueUUIDs(
+    `${courseDirPath}/summaries`,
+    `${courseDirPath}/readings`,
+    `${courseDirPath}/questions`
+  );
   console.log('Congrats! Everything looks good!');
 }
 
