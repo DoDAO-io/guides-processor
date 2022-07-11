@@ -17,7 +17,6 @@ topics:
     readings: blockchian_basics.yaml
     summaries: blockchian_basics.yaml
     questions: blockchian_basics.yaml
-    order: 0
     status: In Progress
     completionWeek:  July 18
   - title: Decentralized Finance
@@ -29,6 +28,5 @@ topics:
     readings: cfi_vs_defi.yaml
     summaries: cfi_vs_defi.yaml
     questions: cfi_vs_defi.yaml
-    order: 1
     status: In Progress
     completionWeek: July 18

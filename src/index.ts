@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import process from 'process';
+import { generateCourseReadme } from './generators/generateCourseReadme';
 import { validateSummariesFiles } from './validation/validateSummariesFiles';
 import { validateReadingsFiles } from './validation/validateReadingsFiles';
 import { validateQuestionFiles } from './validation/validateQuestionFiles';
@@ -21,6 +22,8 @@ export function validateFiles(srcPath: string) {
     `${courseDirPath}/questions`
   );
   console.log('Congrats! Everything looks good!');
+
+  generateCourseReadme(courseDirPath);
 }
 
 program
