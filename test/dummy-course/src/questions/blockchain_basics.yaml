@@ -9,11 +9,9 @@
   answerKeys:
     - e0kl
   # should be from one of the predefined list of topics
-  topic: "01_data_types"
-  # should be from one of the predefined list of sub-topics, or can be a new one
   sub_topics:
-    - "string"
-    - "variables"
+    - "consensus-layer"
+    - "cryptographic-primitives"
   # Difficulty level should be one option from "Low" , "Medium", "High"
   difficulty_level: "Low"
   choices:

@@ -1,5 +1,7 @@
 import { Command } from 'commander';
 import process from 'process';
+import { validateSummariesFiles } from './validation/validateSummariesFiles';
+import { validateReadingsFiles } from './validation/validateReadingsFiles';
 import { validateQuestionFiles } from './validation/validateQuestionFiles';
 import { validateCourseFile } from './validation/validateCourseFile';
 
@@ -9,7 +11,9 @@ export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
   validateCourseFile(`${courseDirPath}/course.yaml`);
+  validateSummariesFiles(`${courseDirPath}/summaries`);
   validateQuestionFiles(`${courseDirPath}/questions`);
+  validateReadingsFiles(`${courseDirPath}/readings`);
   console.log('Congrats! Everything looks good!');
 }
 

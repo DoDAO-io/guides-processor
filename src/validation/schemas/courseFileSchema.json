@@ -34,9 +34,6 @@
             },
             "questions": {
               "type": "string"
-            },
-            "order": {
-              "type": "integer"
             }
           },
           "required": [
@@ -44,8 +41,7 @@
             "summary",
             "readings",
             "summaries",
-            "questions",
-            "order"
+            "questions"
           ]
         },
         {
@@ -65,9 +61,6 @@
             },
             "questions": {
               "type": "string"
-            },
-            "order": {
-              "type": "integer"
             }
           },
           "required": [
@@ -75,8 +68,7 @@
             "summary",
             "readings",
             "summaries",
-            "questions",
-            "order"
+            "questions"
           ]
         }
       ]

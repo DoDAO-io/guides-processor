@@ -28,9 +28,6 @@
             }
           ]
         },
-        "topic": {
-          "type": "string"
-        },
         "sub_topics": {
           "type": "array",
           "items": [
@@ -56,15 +53,11 @@
                 },
                 "key": {
                   "type": "string"
-                },
-                "order": {
-                  "type": "integer"
                 }
               },
               "required": [
                 "content",
-                "key",
-                "order"
+                "key"
               ]
             },
             {
@@ -75,15 +68,11 @@
                 },
                 "key": {
                   "type": "string"
-                },
-                "order": {
-                  "type": "integer"
                 }
               },
               "required": [
                 "content",
-                "key",
-                "order"
+                "key"
               ]
             },
             {
@@ -94,15 +83,11 @@
                 },
                 "key": {
                   "type": "string"
-                },
-                "order": {
-                  "type": "integer"
                 }
               },
               "required": [
                 "content",
-                "key",
-                "order"
+                "key"
               ]
             },
             {
@@ -113,15 +98,11 @@
                 },
                 "key": {
                   "type": "string"
-                },
-                "order": {
-                  "type": "integer"
                 }
               },
               "required": [
                 "content",
-                "key",
-                "order"
+                "key"
               ]
             }
           ]
@@ -134,7 +115,6 @@
         "hint",
         "explanation",
         "answerKeys",
-        "topic",
         "sub_topics",
         "difficulty_level",
         "choices"
