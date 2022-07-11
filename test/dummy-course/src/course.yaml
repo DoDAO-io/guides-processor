@@ -14,9 +14,9 @@ topics:
         * What is blockchian
         * Its uses
         * History
-    readings: blockchian_basics.yaml
-    summaries: blockchian_basics.yaml
-    questions: blockchian_basics.yaml
+    readings: blockchain_basics.yaml
+    summaries: blockchain_basics.yaml
+    questions: blockchain_basics.yaml
     status: In Progress
     completionWeek:  July 18
   - title: Decentralized Finance
