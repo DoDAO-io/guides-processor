@@ -34,7 +34,7 @@ export function generateQuestions(
     
     ${questionsJson.map(question => {
       return dedent`
-        **${question.content}**
+        ${question.content}
         ${choicesMarkdown(question.answerKeys, question.choices)}         
       `;
     }).join("\n \n")}

@@ -154,13 +154,13 @@
     - "reference-types"
   difficulty_level: Low
   choices:
-    - content: uint arr[10];
+    - content: "`uint arr[10];`"
       key: A
-    - content: int []arr;
+    - content: "`int []arr;`"
       key: B
-    - content: uint arr[] = [1,2,3];
+    - content: "`uint arr[] = [1,2,3];`"
       key: C
-    - content: int [3]arr;
+    - content: "`int [3]arr;`"
       key: D
 
 - uuid: 42d6e1ad-75b3-41a8-88d7-7aa7f958619f
@@ -1076,18 +1076,19 @@
 
 - uuid: 47e3f7e4-b2e6-4c0f-acd7-e7c960203710
   type: SingleChoice
-  content: "Consider the following code snippet ,
-              // SPDX-License-Identifier: GPL-3.0
-                pragma solidity ^0.8.8;
-                contract test {
-                  enum ActionChoices { GoLeft, GoRight, GoStraight, SitStill }
-
-                  function foo() public pure returns (ActionChoices) {
-                      return type(ActionChoices).max;
-                  }
-                }
-            What will be the output when the function foo is called ?"
-
+  content: |
+    Consider the following code snippet ,
+    ```
+         // SPDX-License-Identifier: GPL-3.0
+           pragma solidity ^0.8.8;
+           contract test {
+             enum ActionChoices { GoLeft, GoRight, GoStraight, SitStill }
+             function foo() public pure returns (ActionChoices) {
+                 return type(ActionChoices).max;
+             }
+           }
+       What will be the output when the function foo is called ?
+    ```  
   hint: .max is used to get the largest value of the given enum.
   explanation: Under the hood, enums are integers, not strings. Solidity will automatically handle converting enums to ints.
   answerKeys:
