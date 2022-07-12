@@ -1,9 +1,10 @@
-import fs from 'fs';
-import { generateQuestions } from './generateQuestions';
-import { writeFileSync } from '../utils/writeFileSync';
-import { Course } from '../model/Course';
-import YAML from 'yaml';
 import dedent from 'dedent-js';
+import fs from 'fs';
+import YAML from 'yaml';
+import { Course } from '../model/Course';
+import { writeFileSync } from '../utils/writeFileSync';
+import { generateQuestions } from './generateQuestions';
+import { generateReadings } from './generateReadings';
 
 function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
   return courseJson.topics
@@ -16,8 +17,16 @@ function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
         questionLink = `[Questions](generated/questions/${topic.questions.replace('.yaml', '')}.md)`;
       }
 
+      let readingLink = '';
+      if (topic.readings) {
+        generateReadings(courseDirPath, topic.title, topic.readings);
+
+        // prettier-ignore
+        readingLink = `[Reading List](generated/readings/${topic.readings.replace('.yaml', '')}.md)`;
+      }
+
       // prettier-ignore
-      return `| ${index + 1}      | ${topic.title} | Description |  |  | ${questionLink} | ${topic.status} | ${topic.completionWeek} |`
+      return `| ${index + 1}      | ${topic.title} | Description |  | ${readingLink} | ${questionLink} | ${topic.status} | ${topic.completionWeek} |`
     })
     .join('\n ');
 }
@@ -33,6 +42,10 @@ export function generateCourseReadme(courseDirPath: string) {
 
   if (!fs.existsSync(`${courseDirPath}/../generated/questions`)) {
     fs.mkdirSync(`${courseDirPath}/../generated/questions`);
+  }
+
+  if (!fs.existsSync(`${courseDirPath}/../generated/readings`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated/readings`);
   }
 
   // prettier-ignore
