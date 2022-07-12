@@ -3,8 +3,8 @@ This is the course header. This will be added on top of every page. Do to [DoDAO
 
  ---
 
- ## Dummy Course
- This is a Dummy Course that is used for validation
+ ## Solidity Course
+ This is a Solidity Course
  
  ## Description
  "Line1" 
@@ -16,5 +16,4 @@ This is the course header. This will be added on top of every page. Do to [DoDAO
  
  | S.No      | Title | Description |Contents |Reading List| Questions | Status | Completion Week |
  | ----------- | ----------- |----------- |----------- |----------- |----------- | ----------- | ----------- |
- | 1      | Blockchain Basics | Description | [Summary](generated/summaries/blockchain_basics.md) | [Reading List](generated/readings/blockchain_basics.md) | [Questions](generated/questions/blockchain_basics.md) | In Progress | July 18 |
- | 2      | Decentralized Finance | Description | [Summary](generated/summaries/cfi_vs_defi.md) | [Reading List](generated/readings/cfi_vs_defi.md) | [Questions](generated/questions/cfi_vs_defi.md) | In Progress | July 18 | 
+ | 1      | Blockchain Basics | Description | [Summary](generated/summaries/data_types.md) | [Reading List](generated/readings/data_types.md) | [Questions](generated/questions/data_types.md) | In Progress | July 18 | 

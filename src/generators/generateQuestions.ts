@@ -37,7 +37,7 @@ export function generateQuestions(
         **${question.content}**
         ${choicesMarkdown(question.answerKeys, question.choices)}         
       `;
-    })}
+    }).join("\n \n")}
     
    
     `;

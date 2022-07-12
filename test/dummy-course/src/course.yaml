@@ -1,32 +1,15 @@
-title: Dummy Course
-summary: This is a Dummy Course that is used for validation
-description:  | 
+title: Solidity Course
+summary: This is a Solidity Course
+description:  |
   "Line1" 
   "Line2" 
   "Line3"
 duration: 45 - 60 mins
 topics:
   - title: Blockchain Basics
-    key: blockchain-basics
     summary: This chapter explains the basics of blockchian
-    description: |
-      This chapter explains about
-        * What is blockchian
-        * Its uses
-        * History
-    readings: blockchain_basics.yaml
-    summaries: blockchain_basics.yaml
-    questions: blockchain_basics.yaml
+    readings: data_types.yaml
+    summaries: data_types.yaml
+    questions: data_types.yaml
     status: In Progress
     completionWeek:  July 18
-  - title: Decentralized Finance
-    key: decentralized-finance
-    summary: Explain on a high level what is decentralized finance
-    description: |
-      This chapter explains 
-      * How is decentralized finance different from centralized finance
-    readings: cfi_vs_defi.yaml
-    summaries: cfi_vs_defi.yaml
-    questions: cfi_vs_defi.yaml
-    status: In Progress
-    completionWeek: July 18
