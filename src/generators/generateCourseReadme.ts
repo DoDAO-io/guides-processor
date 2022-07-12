@@ -1,5 +1,6 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
+import { generateSummaries } from './generateSummaries';
 import YAML from 'yaml';
 import { Course } from '../model/Course';
 import { writeFileSync } from '../utils/writeFileSync';
@@ -25,8 +26,16 @@ function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
         readingLink = `[Reading List](generated/readings/${topic.readings.replace('.yaml', '')}.md)`;
       }
 
+      let summariesLink = '';
+      if (topic.summaries) {
+        generateSummaries(courseDirPath, topic.title, topic.summaries);
+
+        // prettier-ignore
+        summariesLink = `[Summary](generated/summaries/${topic.summaries.replace('.yaml', '')}.md)`;
+      }
+
       // prettier-ignore
-      return `| ${index + 1}      | ${topic.title} | Description |  | ${readingLink} | ${questionLink} | ${topic.status} | ${topic.completionWeek} |`
+      return `| ${index + 1}      | ${topic.title} | Description | ${summariesLink} | ${readingLink} | ${questionLink} | ${topic.status} | ${topic.completionWeek} |`
     })
     .join('\n ');
 }
@@ -46,6 +55,10 @@ export function generateCourseReadme(courseDirPath: string) {
 
   if (!fs.existsSync(`${courseDirPath}/../generated/readings`)) {
     fs.mkdirSync(`${courseDirPath}/../generated/readings`);
+  }
+
+  if (!fs.existsSync(`${courseDirPath}/../generated/summaries`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated/summaries`);
   }
 
   // prettier-ignore
