@@ -28,7 +28,7 @@
             }
           ]
         },
-        "sub_topics": {
+        "subTopics": {
           "type": "array",
           "items": [
             {
@@ -39,7 +39,7 @@
             }
           ]
         },
-        "difficulty_level": {
+        "difficultyLevel": {
           "type": "string"
         },
         "choices": {
@@ -115,8 +115,8 @@
         "hint",
         "explanation",
         "answerKeys",
-        "sub_topics",
-        "difficulty_level",
+        "subTopics",
+        "difficultyLevel",
         "choices"
       ]
     }

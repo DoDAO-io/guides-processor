@@ -4,5 +4,5 @@ export interface Reading {
   summary: string;
   type: string;
   url: string;
-  sub_topics: string[];
+  subTopics: string[];
 }

@@ -42,10 +42,10 @@ export function validateUniqueUUIDs(
       }
 
       if (
-        !every(question.sub_topics, subTopic => subTopics.includes(subTopic))
+        !every(question.subTopics, subTopic => subTopics.includes(subTopic))
       ) {
         throw new Error(
-          `Unexpected Subtopics ${question.sub_topics} - of ${question.content}. File ${questionFile.filepath}`
+          `Unexpected Subtopics ${question.subTopics} - of ${question.content}. File ${questionFile.filepath}`
         );
       }
     });
@@ -66,10 +66,10 @@ export function validateUniqueUUIDs(
       }
 
       if (
-        !every(reading.sub_topics, subTopic => subTopics.includes(subTopic))
+        !every(reading.subTopics, subTopic => subTopics.includes(subTopic))
       ) {
         throw new Error(
-          `Unexpected Subtopics ${reading.sub_topics} - of ${reading.title}. File ${readingsFile.filepath}`
+          `Unexpected Subtopics ${reading.subTopics} - of ${reading.title}. File ${readingsFile.filepath}`
         );
       }
     });

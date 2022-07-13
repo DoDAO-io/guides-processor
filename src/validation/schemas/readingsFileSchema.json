@@ -20,7 +20,7 @@
         "url": {
           "type": "string"
         },
-        "sub_topics": {
+        "subTopics": {
           "type": "array",
           "items": [
             {
@@ -41,7 +41,7 @@
         "summary",
         "type",
         "url",
-        "sub_topics",
+        "subTopics",
         "description"
       ]
     },
@@ -63,7 +63,7 @@
         "url": {
           "type": "string"
         },
-        "sub_topics": {
+        "subTopics": {
           "type": "array",
           "items": [
             {
@@ -84,7 +84,7 @@
         "summary",
         "type",
         "url",
-        "sub_topics",
+        "subTopics",
         "description"
       ]
     }
