@@ -36,13 +36,15 @@ export function generateQuestions(
       return dedent`
       
         ---
+
         ##### ${question.content}
         
         ${choicesMarkdown(question.answerKeys, question.choices)}         
         
         Hint: ${question.hint}
                
-        Explanation: ${question.explanation}         
+        Explanation: ${question.explanation}  
+               
       `;
     }).join("\n \n")}
     
