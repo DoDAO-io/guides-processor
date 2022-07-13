@@ -34,18 +34,18 @@ export function generateQuestions(
     
     ${questionsJson.map(question => {
       return dedent`
-      
-        ---
 
-        ##### ${question.content}
+---
+
+##### ${question.content}  
+      
+${choicesMarkdown(question.answerKeys, question.choices)}
         
-        ${choicesMarkdown(question.answerKeys, question.choices)}         
-        
-        Hint: ${question.hint}
+Hint: ${question.hint}
                
-        Explanation: ${question.explanation}  
-               
-      `;
+Explanation: ${question.explanation}
+
+`;
     }).join("\n \n")}
     
    
