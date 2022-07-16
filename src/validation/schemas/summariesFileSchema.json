@@ -11,9 +11,6 @@
         "key": {
           "type": "string"
         },
-        "summary": {
-          "type": "string"
-        },
         "details": {
           "type": "string"
         }
@@ -21,7 +18,6 @@
       "required": [
         "title",
         "key",
-        "summary",
         "details"
       ]
     },
@@ -34,9 +30,6 @@
         "key": {
           "type": "string"
         },
-        "summary": {
-          "type": "string"
-        },
         "details": {
           "type": "string"
         }
@@ -44,7 +37,6 @@
       "required": [
         "title",
         "key",
-        "summary",
         "details"
       ]
     },
@@ -57,9 +49,6 @@
         "key": {
           "type": "string"
         },
-        "summary": {
-          "type": "string"
-        },
         "details": {
           "type": "string"
         }
@@ -67,7 +56,6 @@
       "required": [
         "title",
         "key",
-        "summary",
         "details"
       ]
     }
