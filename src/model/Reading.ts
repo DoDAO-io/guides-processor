@@ -1,7 +1,7 @@
 export interface Reading {
   uuid: string;
   title: string;
-  summary: string;
+  details: string;
   type: string;
   url: string;
   subTopics: string[];

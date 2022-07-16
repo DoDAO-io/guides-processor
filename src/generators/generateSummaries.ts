@@ -25,7 +25,6 @@ export function generateSummaries(
       .map(summary => {
         return dedent`
         **${summary.title}**        
-        ${summary.summary}   
         ${summary.details} 
       `;
       })
