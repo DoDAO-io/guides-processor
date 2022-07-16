@@ -11,9 +11,6 @@
         "title": {
           "type": "string"
         },
-        "summary": {
-          "type": "string"
-        },
         "type": {
           "type": "string"
         },
@@ -31,18 +28,17 @@
             }
           ]
         },
-        "description": {
+        "details": {
           "type": "string"
         }
       },
       "required": [
         "uuid",
         "title",
-        "summary",
         "type",
         "url",
         "subTopics",
-        "description"
+        "details"
       ]
     },
     {
@@ -54,9 +50,6 @@
         "uuid": {
           "type": "string"
         },
-        "summary": {
-          "type": "string"
-        },
         "type": {
           "type": "string"
         },
@@ -74,18 +67,17 @@
             }
           ]
         },
-        "description": {
+        "details": {
           "type": "string"
         }
       },
       "required": [
         "uuid",
         "title",
-        "summary",
         "type",
         "url",
         "subTopics",
-        "description"
+        "details"
       ]
     }
   ]
