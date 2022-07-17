@@ -5,6 +5,9 @@
     "title": {
       "type": "string"
     },
+    "key": {
+      "type": "string"
+    },
     "summary": {
       "type": "string"
     },
@@ -75,6 +78,7 @@
     }
   },
   "required": [
+    "key",
     "title",
     "summary",
     "description",

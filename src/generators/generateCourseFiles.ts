@@ -6,6 +6,7 @@ import { Course } from '../model/Course';
 import { writeFileSync } from '../utils/writeFileSync';
 import { generateQuestions } from './generateQuestions';
 import { generateReadings } from './generateReadings';
+import { generateCoursesJson } from './generateCoursesJson';
 
 function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
   return courseJson.topics
@@ -40,27 +41,7 @@ function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
     .join('\n ');
 }
 
-export function generateCourseReadme(courseDirPath: string) {
-  const courseFile = fs.readFileSync(`${courseDirPath}/course.yaml`, 'utf8');
-  const header = fs.readFileSync(`${courseDirPath}/course-header.md`, 'utf8');
-  const courseJson = YAML.parse(courseFile) as Course;
-
-  if (!fs.existsSync(`${courseDirPath}/../generated`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated`);
-  }
-
-  if (!fs.existsSync(`${courseDirPath}/../generated/questions`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/questions`);
-  }
-
-  if (!fs.existsSync(`${courseDirPath}/../generated/readings`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/readings`);
-  }
-
-  if (!fs.existsSync(`${courseDirPath}/../generated/summaries`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/summaries`);
-  }
-
+function generateCourseTable(header: string, courseJson: Course, courseDirPath: string) {
   // prettier-ignore
   const courseReadmeContents =
     dedent`${header}
@@ -81,4 +62,30 @@ export function generateCourseReadme(courseDirPath: string) {
     `;
 
   writeFileSync(`${courseDirPath}/../README.md`, courseReadmeContents);
+}
+
+export function generateCourseFiles(courseDirPath: string) {
+  const courseFile = fs.readFileSync(`${courseDirPath}/course.yaml`, 'utf8');
+  const header = fs.readFileSync(`${courseDirPath}/course-header.md`, 'utf8');
+  const courseJson = YAML.parse(courseFile) as Course;
+
+  if (!fs.existsSync(`${courseDirPath}/../generated`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated`);
+  }
+
+  if (!fs.existsSync(`${courseDirPath}/../generated/questions`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated/questions`);
+  }
+
+  if (!fs.existsSync(`${courseDirPath}/../generated/readings`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated/readings`);
+  }
+
+  if (!fs.existsSync(`${courseDirPath}/../generated/summaries`)) {
+    fs.mkdirSync(`${courseDirPath}/../generated/summaries`);
+  }
+
+  generateCourseTable(header, courseJson, courseDirPath);
+
+  generateCoursesJson(courseDirPath, courseJson);
 }
