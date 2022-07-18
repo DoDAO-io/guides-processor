@@ -105,7 +105,8 @@
                 "key"
               ]
             }
-          ]
+          ],
+          "additionalProperties": false
         }
       },
       "required": [
