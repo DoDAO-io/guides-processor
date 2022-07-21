@@ -12,7 +12,7 @@ export function generateTopicDetails(
 
   const { questionsLink, readingsLink, summariesLink } = generatedFileLinks(
     topic,
-    './../'
+    './../../'
   );
 
   const topicsReadmeContents = dedent`
