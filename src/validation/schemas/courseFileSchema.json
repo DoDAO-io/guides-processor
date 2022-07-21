@@ -11,7 +11,7 @@
     "summary": {
       "type": "string"
     },
-    "description": {
+    "details": {
       "type": "string"
     },
     "duration": {
@@ -26,7 +26,10 @@
             "title": {
               "type": "string"
             },
-            "summary": {
+            "details": {
+              "type": "string"
+            },
+            "key": {
               "type": "string"
             },
             "readings": {
@@ -41,7 +44,8 @@
           },
           "required": [
             "title",
-            "summary",
+            "details",
+            "key",
             "readings",
             "summaries",
             "questions"
@@ -53,7 +57,10 @@
             "title": {
               "type": "string"
             },
-            "summary": {
+            "key": {
+              "type": "string"
+            },
+            "details": {
               "type": "string"
             },
             "readings": {
@@ -68,7 +75,8 @@
           },
           "required": [
             "title",
-            "summary",
+            "details",
+            "key",
             "readings",
             "summaries",
             "questions"
@@ -82,7 +90,7 @@
     "key",
     "title",
     "summary",
-    "description",
+    "details",
     "duration",
     "topics"
   ],

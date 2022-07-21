@@ -1,11 +1,11 @@
-import {Command} from 'commander';
+import { Command } from 'commander';
 import process from 'process';
-import {generateCourseFiles} from './generators/generateCourseFiles';
-import {validateCourseFile} from './validation/validateCourseFile';
-import {validateQuestionFiles} from './validation/validateQuestionFiles';
-import {validateReadingsFiles} from './validation/validateReadingsFiles';
-import {validateSummariesFiles} from './validation/validateSummariesFiles';
-import {validateUniqueUUIDs} from './validation/validateUniqueUUIDs';
+import { generateCourseFiles } from './generators/generateCourseFiles';
+import { validateCourseFile } from './validation/validateCourseFile';
+import { validateQuestionFiles } from './validation/validateQuestionFiles';
+import { validateReadingsFiles } from './validation/validateReadingsFiles';
+import { validateSummariesFiles } from './validation/validateSummariesFiles';
+import { validateUniqueUUIDs } from './validation/validateUniqueUUIDs';
 
 const program = new Command();
 

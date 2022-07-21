@@ -32,8 +32,9 @@ export function generateQuestions(
     
     ## ${topic}
     
-    ${questionsJson.map(question => {
-      return dedent`
+    ${questionsJson
+      .map(question => {
+        return dedent`
 
 ---
 
@@ -45,8 +46,10 @@ Hint: ${question.hint}
                
 Explanation: ${question.explanation}
 
+Sub Topics: ${question.subTopics.join(', ')}
 `;
-    }).join("\n \n")}
+      })
+      .join('\n \n')}
     
    
     `;

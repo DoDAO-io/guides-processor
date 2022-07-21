@@ -11,6 +11,10 @@
         "title": {
           "type": "string"
         },
+        "shortTitle": {
+          "type": "string",
+          "maxLength": 20
+        },
         "type": {
           "type": "string"
         },
@@ -47,6 +51,10 @@
         "title": {
           "type": "string"
         },
+        "shortTitle": {
+          "type": "string",
+          "maxLength": 20
+        },
         "uuid": {
           "type": "string"
         },
@@ -74,6 +82,7 @@
       "required": [
         "uuid",
         "title",
+        "shortTitle",
         "type",
         "url",
         "subTopics",

@@ -25,12 +25,16 @@ export function generateReadings(
       .map(reading => {
         const paramString = reading.url.split('?')[1];
         const videoId = new URLSearchParams(paramString).get('v');
+        // prettier-ignore
+        const videoImage = ` [![${reading.title}](https://img.youtube.com/vi/${videoId}/0.jpg)](https://www.youtube.com/watch?v=${videoId}`;
         return dedent`
         **${reading.title}**
         
-        [![${reading.title}](https://img.youtube.com/vi/${videoId}/0.jpg)](https://www.youtube.com/watch?v=${videoId})     
+       ${videoImage})     
         
         ${reading.details}    
+        
+        Sub Topics: ${reading.subTopics.join(', ')}    
       `;
       })
       .join('\n ')}

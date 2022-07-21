@@ -65,9 +65,7 @@ export function validateUniqueUUIDs(
         uuids.push(reading.uuid);
       }
 
-      if (
-        !every(reading.subTopics, subTopic => subTopics.includes(subTopic))
-      ) {
+      if (!every(reading.subTopics, subTopic => subTopics.includes(subTopic))) {
         throw new Error(
           `Unexpected Subtopics ${reading.subTopics} - of ${reading.title}. File ${readingsFile.filepath}`
         );

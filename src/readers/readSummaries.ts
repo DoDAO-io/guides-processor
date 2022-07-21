@@ -1,6 +1,6 @@
 import fs from 'fs';
 import YAML from 'yaml';
-import {Summary} from '../model/Summary';
+import { Summary } from '../model/Summary';
 
 export function readSummaries(
   courseDirPath: string,

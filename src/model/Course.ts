@@ -4,7 +4,7 @@ export interface Course {
   key: string;
   title: string;
   summary: string;
-  description: string;
+  details: string;
   duration: string;
   topics: CourseTopics[];
 }

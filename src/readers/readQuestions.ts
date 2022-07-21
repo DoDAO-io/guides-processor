@@ -1,6 +1,6 @@
 import fs from 'fs';
 import YAML from 'yaml';
-import {Question} from '../model/Question';
+import { Question } from '../model/Question';
 
 export function readQuestions(
   courseDirPath: string,
@@ -10,5 +10,5 @@ export function readQuestions(
     `${courseDirPath}/questions/${questionsFile}`,
     'utf8'
   );
-  return YAML.parse(file) as Question[]
+  return YAML.parse(file) as Question[];
 }
