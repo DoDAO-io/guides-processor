@@ -8,6 +8,10 @@
         "title": {
           "type": "string"
         },
+        "shortTitle": {
+          "type": "string",
+          "maxLength": 20
+        },
         "key": {
           "type": "string"
         },
@@ -17,6 +21,7 @@
       },
       "required": [
         "title",
+        "shortTitle",
         "key",
         "details"
       ]
@@ -27,6 +32,10 @@
         "title": {
           "type": "string"
         },
+        "shortTitle": {
+          "type": "string",
+          "maxLength": 20
+        },
         "key": {
           "type": "string"
         },
@@ -36,6 +45,7 @@
       },
       "required": [
         "title",
+        "shortTitle",
         "key",
         "details"
       ]
@@ -46,6 +56,10 @@
         "title": {
           "type": "string"
         },
+        "shortTitle": {
+          "type": "string",
+          "maxLength": 20
+        },
         "key": {
           "type": "string"
         },
@@ -55,6 +69,7 @@
       },
       "required": [
         "title",
+        "shortTitle",
         "key",
         "details"
       ]

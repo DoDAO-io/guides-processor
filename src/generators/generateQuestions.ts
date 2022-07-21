@@ -45,6 +45,7 @@ Hint: ${question.hint}
                
 Explanation: ${question.explanation}
 
+Sub Topics: ${question.subTopics.join(", ")}
 `;
     }).join("\n \n")}
     

@@ -1,12 +1,11 @@
-import {Question} from "./Question";
-import {Reading} from "./Reading";
-import {Summary} from "./Summary";
+import { Question } from './Question';
+import { Reading } from './Reading';
+import { Summary } from './Summary';
 
 export interface CourseTopicJson {
   title: string;
   key: string;
-  summary: string;
-  description: string;
+  details: string;
   order: number;
   questions: Question[];
   readings: Reading[];
@@ -14,10 +13,10 @@ export interface CourseTopicJson {
 }
 
 export interface CourseJson {
-  key: string
+  key: string;
   title: string;
   summary: string;
-  description: string;
+  details: string;
   duration: string;
-  topics: CourseTopicJson[]
+  topics: CourseTopicJson[];
 }

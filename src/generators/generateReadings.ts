@@ -31,6 +31,8 @@ export function generateReadings(
         [![${reading.title}](https://img.youtube.com/vi/${videoId}/0.jpg)](https://www.youtube.com/watch?v=${videoId})     
         
         ${reading.details}    
+        
+        Sub Topics: ${reading.subTopics.join(", ")}    
       `;
       })
       .join('\n ')}

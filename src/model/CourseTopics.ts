@@ -2,7 +2,7 @@ export interface CourseTopics {
   title: string;
   key: string;
   summary: string;
-  description: string;
+  details: string;
   readings?: string;
   summaries?: string;
   questions?: string;

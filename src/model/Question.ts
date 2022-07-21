@@ -10,7 +10,7 @@ export interface Question {
   hint: string;
   explanation: string;
   answerKeys: string[];
-  subTopics: string;
+  subTopics: string[];
   difficultyLevel: string;
   choices: QuestionChoice[];
 }

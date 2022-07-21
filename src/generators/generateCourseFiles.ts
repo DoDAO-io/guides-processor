@@ -1,47 +1,59 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import { generateSummaries } from './generateSummaries';
 import YAML from 'yaml';
 import { Course } from '../model/Course';
+import { getCoursesJson } from '../utils/getCoursesJson';
 import { writeFileSync } from '../utils/writeFileSync';
+import { CourseJson } from './../model/CourseJson';
 import { generateQuestions } from './generateQuestions';
 import { generateReadings } from './generateReadings';
-import { generateCoursesJson } from './generateCoursesJson';
+import { generateSummaries } from './generateSummaries';
+import { generateTopicDetails } from './generateTopicDetails';
+import { generatedFileLinks } from './../utils/generatedFileLinks';
 
-function generateCourseTopicsTable(courseDirPath: string, courseJson: Course) {
+function generateCourseTopicsTable(
+  courseDirPath: string,
+  courseJson: Course,
+  courseJsonObject: CourseJson
+) {
   return courseJson.topics
     .map((topic, index) => {
-      let questionLink = '';
       if (topic.questions) {
         generateQuestions(courseDirPath, topic.title, topic.questions);
-
-        // prettier-ignore
-        questionLink = `[Questions](generated/questions/${topic.questions.replace('.yaml', '')}.md)`;
       }
 
-      let readingLink = '';
       if (topic.readings) {
         generateReadings(courseDirPath, topic.title, topic.readings);
-
-        // prettier-ignore
-        readingLink = `[Reading List](generated/readings/${topic.readings.replace('.yaml', '')}.md)`;
       }
 
-      let summariesLink = '';
       if (topic.summaries) {
         generateSummaries(courseDirPath, topic.title, topic.summaries);
-
-        // prettier-ignore
-        summariesLink = `[Summary](generated/summaries/${topic.summaries.replace('.yaml', '')}.md)`;
       }
 
+      const { questionsLink, readingsLink, summariesLink } = generatedFileLinks(
+        topic
+      );
+
+      const contentsString = courseJsonObject.topics
+        .find(courseTopic => courseTopic.key === topic.key)!
+        .summaries.map(summary => `* ${summary.title}`)
+        .join('<br/> ');
+
+      generateTopicDetails(courseDirPath, topic);
+
+      const topicDetailsFileLink = `[Details](generated/topics/${topic.key}.md)`;
       // prettier-ignore
-      return `| ${index + 1}      | ${topic.title} | Description | ${summariesLink} | ${readingLink} | ${questionLink} | ${topic.status} | ${topic.completionWeek} |`
+      return `| ${index + 1}      | ${topic.title} | ${contentsString}| ${topicDetailsFileLink} <br/> ${summariesLink} <br/> ${readingsLink} <br/> ${questionsLink} | ${topic.status} | ${topic.completionWeek} |`
     })
     .join('\n ');
 }
 
-function generateCourseTable(header: string, courseJson: Course, courseDirPath: string) {
+function generateCourseTable(
+  header: string,
+  courseDirPath: string,
+  courseJson: Course,
+  courseJsonObject: CourseJson
+) {
   // prettier-ignore
   const courseReadmeContents =
     dedent`${header}
@@ -51,41 +63,54 @@ function generateCourseTable(header: string, courseJson: Course, courseDirPath: 
     ${courseJson.summary}
     
     ## Description
-    ${courseJson.description}
+    ${courseJson.details}
     
     ## Chapters
     
-    | S.No      | Title | Description |Contents |Reading List| Questions | Status | Completion Week |
-    | ----------- | ----------- |----------- |----------- |----------- |----------- | ----------- | ----------- |
-    ${(generateCourseTopicsTable(courseDirPath, courseJson))} 
+    | S.No        | Title       | Contents   | Links      | Status      | Completion Week |
+    | ----------- | ----------- |----------- |----------- | ----------- | ----------- |
+    ${(generateCourseTopicsTable(courseDirPath, courseJson, courseJsonObject))} 
    
     `;
 
   writeFileSync(`${courseDirPath}/../README.md`, courseReadmeContents);
 }
 
+function createDirectoriesIfNotExists(courseDirPath: string) {
+  const generatedFolder = `${courseDirPath}/../generated`;
+  const questionsFolder = `${courseDirPath}/../generated/questions`;
+  const readingsFolder = `${courseDirPath}/../generated/readings`;
+  const summariesFolder = `${courseDirPath}/../generated/summaries`;
+  const topicsFolder = `${courseDirPath}/../generated/topics`;
+
+  const foldersToGenerate = [
+    generatedFolder,
+    questionsFolder,
+    readingsFolder,
+    summariesFolder,
+    topicsFolder,
+  ];
+
+  foldersToGenerate.forEach(folder => {
+    if (!fs.existsSync(folder)) {
+      fs.mkdirSync(folder);
+    }
+  });
+}
+
 export function generateCourseFiles(courseDirPath: string) {
   const courseFile = fs.readFileSync(`${courseDirPath}/course.yaml`, 'utf8');
   const header = fs.readFileSync(`${courseDirPath}/course-header.md`, 'utf8');
-  const courseJson = YAML.parse(courseFile) as Course;
+  const course = YAML.parse(courseFile) as Course;
 
-  if (!fs.existsSync(`${courseDirPath}/../generated`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated`);
-  }
+  createDirectoriesIfNotExists(courseDirPath);
 
-  if (!fs.existsSync(`${courseDirPath}/../generated/questions`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/questions`);
-  }
+  const courseJsonObject = getCoursesJson(courseDirPath, course);
 
-  if (!fs.existsSync(`${courseDirPath}/../generated/readings`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/readings`);
-  }
+  generateCourseTable(header, courseDirPath, course, courseJsonObject);
 
-  if (!fs.existsSync(`${courseDirPath}/../generated/summaries`)) {
-    fs.mkdirSync(`${courseDirPath}/../generated/summaries`);
-  }
-
-  generateCourseTable(header, courseJson, courseDirPath);
-
-  generateCoursesJson(courseDirPath, courseJson);
+  writeFileSync(
+    `${courseDirPath}/../generated/course.json`,
+    JSON.stringify(courseJsonObject, null, 2)
+  );
 }

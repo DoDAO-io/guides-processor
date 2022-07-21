@@ -1,14 +1,15 @@
 key: solidity-course
 title: Solidity Course
 summary: This is a Solidity Course
-description:  |
+details:  |
   "Line1" 
   "Line2" 
   "Line3"
 duration: 45 - 60 mins
 topics:
   - title: Blockchain Basics
-    summary: This chapter explains the basics of blockchian
+    key: blockchain-basics
+    details: This chapter explains the basics of blockchian
     readings: data_types.yaml
     summaries: data_types.yaml
     questions: data_types.yaml
