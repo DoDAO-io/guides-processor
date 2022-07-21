@@ -60,7 +60,7 @@
             "key": {
               "type": "string"
             },
-            "summary": {
+            "details": {
               "type": "string"
             },
             "readings": {
@@ -75,8 +75,8 @@
           },
           "required": [
             "title",
+            "details",
             "key",
-            "summary",
             "readings",
             "summaries",
             "questions"
