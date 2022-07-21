@@ -1,8 +1,8 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import { generatedFileLinks } from './../utils/generatedFileLinks';
-import { CourseTopics } from '../model/CourseTopics';
-import { writeFileSync } from '../utils/writeFileSync';
+import { generatedFileLinks } from '@utils/generatedFileLinks';
+import { CourseTopics } from '@model/CourseTopics';
+import { writeFileSync } from '@utils/writeFileSync';
 
 export function generateTopicDetails(
   courseDirPath: string,

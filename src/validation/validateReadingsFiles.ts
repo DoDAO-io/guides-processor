@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { Validator } from 'jsonschema';
 import { throwValidationError } from './throwValidationError';
-import { readFilesSync } from '../utils/readFilesSync';
+import { readFilesSync } from '@utils/readFilesSync';
 import YAML from 'yaml';
 import readingsFileSchema from './schemas/readingsFileSchema.json';
 

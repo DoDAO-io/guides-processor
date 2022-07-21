@@ -1,8 +1,8 @@
-import { Course } from '../model/Course';
-import { readQuestions } from './../readers/readQuestions';
-import { readReadings } from './../readers/readReadings';
-import { readSummaries } from './../readers/readSummaries';
-import { CourseJson, CourseTopicJson } from './../model/CourseJson';
+import { Course } from '@model/Course';
+import { readQuestions } from '@readers/readQuestions';
+import { readReadings } from '@readers/readReadings';
+import { readSummaries } from '@readers/readSummaries';
+import { CourseJson, CourseTopicJson } from '@model/CourseJson';
 
 export function getCoursesJson(
   courseDirPath: string,

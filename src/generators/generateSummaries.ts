@@ -1,8 +1,8 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
 import YAML from 'yaml';
-import { Summary } from '../model/Summary';
-import { writeFileSync } from '../utils/writeFileSync';
+import { Summary } from '@model/Summary';
+import { writeFileSync } from '@utils/writeFileSync';
 
 export function generateSummaries(
   courseDirPath: string,

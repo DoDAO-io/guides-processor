@@ -1,8 +1,8 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
 import YAML from 'yaml';
-import { Question, QuestionChoice } from '../model/Question';
-import { writeFileSync } from '../utils/writeFileSync';
+import { Question, QuestionChoice } from '@model/Question';
+import { writeFileSync } from '@utils/writeFileSync';
 
 const choicesMarkdown = (
   answerKeys: string[],
@@ -32,8 +32,9 @@ export function generateQuestions(
     
     ## ${topic}
     
-    ${questionsJson.map(question => {
-      return dedent`
+    ${questionsJson
+      .map(question => {
+        return dedent`
 
 ---
 
@@ -45,9 +46,10 @@ Hint: ${question.hint}
                
 Explanation: ${question.explanation}
 
-Sub Topics: ${question.subTopics.join(", ")}
+Sub Topics: ${question.subTopics.join(', ')}
 `;
-    }).join("\n \n")}
+      })
+      .join('\n \n')}
     
    
     `;

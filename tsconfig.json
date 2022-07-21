@@ -39,6 +39,13 @@
     "forceConsistentCasingInFileNames": true,
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@generators/*": ["./src/generators/*"],
+      "@model/*": ["./src/model/*"],
+      "@readers/*": ["./src/readers/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@validation/*": ["./src/validation/*"]
+    }
   }
 }

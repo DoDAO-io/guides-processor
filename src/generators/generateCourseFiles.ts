@@ -1,15 +1,15 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
 import YAML from 'yaml';
-import { Course } from '../model/Course';
-import { getCoursesJson } from '../utils/getCoursesJson';
-import { writeFileSync } from '../utils/writeFileSync';
-import { CourseJson } from './../model/CourseJson';
+import { Course } from '@model/Course';
+import { getCoursesJson } from '@utils/getCoursesJson';
+import { writeFileSync } from '@utils/writeFileSync';
+import { CourseJson } from '@model/CourseJson';
 import { generateQuestions } from './generateQuestions';
 import { generateReadings } from './generateReadings';
 import { generateSummaries } from './generateSummaries';
 import { generateTopicDetails } from './generateTopicDetails';
-import { generatedFileLinks } from './../utils/generatedFileLinks';
+import { generatedFileLinks } from '@utils/generatedFileLinks';
 
 function generateCourseTopicsTable(
   courseDirPath: string,
