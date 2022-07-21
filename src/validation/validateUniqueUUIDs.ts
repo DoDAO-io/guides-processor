@@ -1,10 +1,10 @@
 import fs from 'fs';
 import every from 'lodash/every';
 import YAML from 'yaml';
-import { Question } from '@model/Question';
-import { Reading } from '@model/Reading';
-import { Summary } from '@model/Summary';
-import { readFilesSync } from '@utils/readFilesSync';
+import { Question } from '../model/Question';
+import { Reading } from '../model/Reading';
+import { Summary } from '../model/Summary';
+import { readFilesSync } from '../utils/readFilesSync';
 
 export function validateUniqueUUIDs(
   summariesDirectory: string,
@@ -65,7 +65,9 @@ export function validateUniqueUUIDs(
         uuids.push(reading.uuid);
       }
 
-      if (!every(reading.subTopics, subTopic => subTopics.includes(subTopic))) {
+      if (
+        !every(reading.subTopics, subTopic => subTopics.includes(subTopic))
+      ) {
         throw new Error(
           `Unexpected Subtopics ${reading.subTopics} - of ${reading.title}. File ${readingsFile.filepath}`
         );

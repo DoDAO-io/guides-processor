@@ -1,5 +1,5 @@
-import { CourseTopics } from '@model/CourseTopics';
-import { yamlToMarkdownExtension } from '@utils/yamlToMarkdownExtension';
+import { CourseTopics } from './../model/CourseTopics';
+import { yamlToMarkdownExtension } from './../utils/yamlToMarkdownExtension';
 
 export function generatedFileLinks(topic: CourseTopics, relativePath = '') {
   let questionsLink = '';

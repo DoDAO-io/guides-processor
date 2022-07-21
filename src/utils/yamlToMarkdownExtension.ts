@@ -1,2 +1,1 @@
-export const yamlToMarkdownExtension = (yamlFile: string) =>
-  `${yamlFile.replace('.yaml', '')}.md)`;
+export const  yamlToMarkdownExtension = (yamlFile: string)  => `${yamlFile.replace('.yaml', '')}.md)`
