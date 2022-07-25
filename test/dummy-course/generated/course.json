@@ -4,6 +4,13 @@
   "summary": "This is a Solidity Course",
   "details": "\"Line1\" \n\"Line2\" \n\"Line3\"\n",
   "duration": "45 - 60 mins",
+  "highlights": [
+    "Explains in Detail",
+    "Summaries for each chapter",
+    "MCQ for each chapter"
+  ],
+  "publishStatus": "Live",
+  "thumbnail": "https://cdn-dfnhb.nitrocdn.com/ncvMSDTJqBfzbhjurpWfVBRIBTRVNXNa/assets/static/optimized/rev-ac80957/wp-content/uploads/2021/08/Services-Page-DeFi-Development.jpg",
   "topics": [
     {
       "title": "Blockchain Basics",
@@ -1550,7 +1557,7 @@
           "difficultyLevel": "Low",
           "choices": [
             {
-              "content": 25,
+              "content": "25",
               "key": "A"
             },
             {

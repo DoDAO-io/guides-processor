@@ -6,5 +6,8 @@ export interface Course {
   summary: string;
   details: string;
   duration: string;
+  highlights: string[];
+  publishStatus: string;
+  thumbnail: string;
   topics: CourseTopics[];
 }

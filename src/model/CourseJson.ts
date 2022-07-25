@@ -18,5 +18,8 @@ export interface CourseJson {
   summary: string;
   details: string;
   duration: string;
+  highlights: string[];
+  publishStatus: string;
+  thumbnail: string;
   topics: CourseTopicJson[];
 }

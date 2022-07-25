@@ -15,7 +15,20 @@ export function getCoursesJson(
     details: topic.details,
     order: index,
     questions: topic.questions
-      ? readQuestions(courseDirPath, topic.questions)
+      ? readQuestions(courseDirPath, topic.questions).map(question => {
+          if (!Array.isArray(question.answerKeys)) {
+            throw Error(
+              `Answer Keys of question: ${question.content} is not an array`
+            );
+          }
+          return {
+            ...question,
+            choices: question.choices.map(choice => ({
+              ...choice,
+              content: choice.content.toString(),
+            })),
+          };
+        })
       : [],
     readings: topic.readings ? readReadings(courseDirPath, topic.readings) : [],
     summaries: topic.summaries
@@ -29,6 +42,9 @@ export function getCoursesJson(
     summary: courseJson.summary,
     details: courseJson.details,
     duration: courseJson.duration,
+    highlights: courseJson.highlights,
+    publishStatus: courseJson.publishStatus,
+    thumbnail: courseJson.thumbnail,
     topics: topicsList,
   };
 

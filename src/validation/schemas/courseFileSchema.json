@@ -17,6 +17,20 @@
     "duration": {
       "type": "string"
     },
+    "highlights": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "publishStatus": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
     "topics": {
       "type": "array",
       "items": [
@@ -106,6 +120,9 @@
     "summary",
     "details",
     "duration",
+    "highlights",
+    "publishStatus",
+    "thumbnail",
     "topics"
   ],
   "additionalProperties": false
