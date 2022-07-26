@@ -41,6 +41,7 @@
         "title",
         "type",
         "url",
+        "shortTitle",
         "subTopics",
         "details"
       ]
