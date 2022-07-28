@@ -29,9 +29,13 @@ export function generateStepItem(stepItem: GuideQuestion | UserInput | UserDisco
   if(isQuestion(stepItem)) {
    const question = stepItem as GuideQuestion;
 return dedent`
+
+
 ##### ${question.content}  
       
 ${choicesMarkdown(question.answerKeys, question.choices)}
+
+
 `
   } else if(isUserInput(stepItem)) {
 
@@ -66,8 +70,8 @@ export function generateGuide(
 ${guideJson.steps
 .map(step => {
   return dedent`
----
-## **${step.name}**
+
+## ${step.name}
 
 ${step.content}
 
@@ -75,7 +79,7 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem))}
 
 `;
     })
-    .join('\n ')}
+    .join('\n\n---\n ')}
     
    
     `;

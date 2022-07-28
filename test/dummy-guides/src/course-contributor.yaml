@@ -21,15 +21,15 @@ uuid: 02103121-0601-4bcf-aea4-05effa366b5f
 steps:
   - content: |
       There are already so many blockchain courses then why do we need another
-      course? \n\n The reason are\n\n1. There are definitely some basic courses, but
+      course?  The reason are1. There are definitely some basic courses, but
       there are only a few courses that cover advanced Developer Concepts & Tools, DeFi,
-      or NFT topics.\n2. We want to cover all the advanced topics in DoDAO and to be
+      or NFT topics.2. We want to cover all the advanced topics in DoDAO and to be
       able to write advanced courses, we need to have basic information/courses in place
-      first.\n3. Once done with basic topics, we will work on the advanced topics.\n4.
+      first.3. Once done with basic topics, we will work on the advanced topics.4.
       DoDAO is an onboarding platform, i.e. we educate the users about various projects.
       Understanding these blockchain projects needs a lot of basic blockchain knowledge.
       These courses can then be reused when we develop onboarding content for various
-      projects.\n \n Note - We would want our courses to be completely free for everyone
+      projects.  Note - We would want our courses to be completely free for everyone
       and forever.
     stepItems: []
     name: Why another course?
@@ -63,18 +63,18 @@ steps:
     uuid: 36360d18-0db0-4880-ac8b-8231dff4eed8
   - content: |
       "There are many video courses, but these is less focus on creating summarized
-      content and on creating questions bank. \n\nSo our focus is to reuse the videos
-      from youtube, but create high quality summaries and question banks.\n\nThere were
-      couple of suggestions which we will also include\n\n1. Create mind maps - Suggestion
+      content and on creating questions bank. So our focus is to reuse the videos
+      from youtube, but create high quality summaries and question banks.There were
+      couple of suggestions which we will also include1. Create mind maps - Suggestion
       by Lakshya. This can be done after we are done with all the chapters. We will
-      create mind map for each chapter and this will be paid work.\n\n2. Incentivize
+      create mind map for each chapter and this will be paid work.2. Incentivize
       course completion - Allow users to download all the mind-maps once they complete
-      the full course. This was recommended by Raghav\n\n3. Assignments and Solutions
-      - Add 2-4 assignments for each chapter with the solutions.\n\n4. Video Annotations
+      the full course. This was recommended by Raghav3. Assignments and Solutions
+      - Add 2-4 assignments for each chapter with the solutions.4. Video Annotations
       - Annotating the Youtube Videos with relevant timestamps and questions. We will
       allow skipping of parts of the video and also show questions on top of videos
-      \n\nNote: Please recommend at least one idea in the #discussions channel under
-      courses\n"
+      Note: Please recommend at least one idea in the #discussions channel under
+      courses"
     stepItems: []
     name: How are our Courses different?
     order: 2
@@ -106,13 +106,13 @@ steps:
     uuid: 4f189ddb-9f74-4b55-b406-e1a6296cb7d6
   - content: |
       "Our basic courses will consist of 6-10 chapters and in each chapter we
-      will cover\n\n1. Readings - we call it readings, but this is the list of videos
+      will cover1. Readings - we call it readings, but this is the list of videos
       one can watch on Youtube to know about the topic. We should capture max of 3-4
-      videos for each chapter.\n2. Summaries - This is a list of sub-topics in a chapter
+      videos for each chapter.2. Summaries - This is a list of sub-topics in a chapter
       which we will summarize. Intent is the user can revise each and every concept
       in the chapter by going through the bullet points. Please look at \"Two Minute
       Drill\" sections in SCJP book ([https://firozstar.tripod.com/_darksiderg.pdf](https://firozstar.tripod.com/_darksiderg.pdf))
-      \n3. Questions - About 50 high quality single or multiple choice questions for
+      3. Questions - About 50 high quality single or multiple choice questions for
       each chapter. We want to write max 2-3 true/false questions. Almost in all cases
       the question should have at least 4 choices."
     stepItems: []
@@ -124,18 +124,18 @@ steps:
       
       ![Courses](https://raw.githubusercontent.com/DoDAO-io/dodao-guide-images/main/ETH/DoDAO/Couse%20Contributor/image.png)
     stepItems: []
-    name: 'What courses will we write?   '
+    name: What courses will we write?
     order: 5
     uuid: 64f91c87-47b2-4bf0-a54c-b815a1e8c827
   - content: | 
-      "Currently contributing to courses involves working on a chapter which
-      has \"two\" tasks\n1. Readings and Summaries - Create yaml file with details of
-      readings and summaries for that chapter. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml)\n2.
+      Currently contributing to courses involves working on a chapter which
+      has \"two\" tasks1. Readings and Summaries - Create yaml file with details of
+      readings and summaries for that chapter. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml)2.
       Questions - Create 50 high quality single or multiple choice questions for the
-      chapter you are working on. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml)\n\nLater
+      chapter you are working on. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml)Later
       on we will add another task i.e. creating of the mind maps for each chapter, but
-      for now its not needed. \n\nAlso make sure that your name is added on a Trello
-      card corresponding to the task you are working on."
+      for now its not needed. Also make sure that your name is added on a Trello
+      card corresponding to the task you are working on.
     stepItems: []
     name: Contributing
     order: 6
