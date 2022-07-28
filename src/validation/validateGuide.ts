@@ -19,8 +19,13 @@ export function validateGuide(guideFilePath: string) {
   v.addSchema(userInputSchema, '/UserInputSchema');
   v.addSchema(questionSchema, '/QuestionSchema');
 
-  const res = v.validate(guideJson, guideFileSchema);
-  if (!res.valid) {
+  const res = v.validate(guideJson, guideFileSchema, {
+    nestedErrors: true
+  });
+
+  if (!res.valid || res.errors.length > 0) {
     throwValidationError(guideFilePath, res.errors);
   }
+
+
 }

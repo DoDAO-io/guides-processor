@@ -31,17 +31,13 @@ steps:
       These courses can then be reused when we develop onboarding content for various
       projects.\n \n Note - We would want our courses to be completely free for everyone
       and forever.
-    created: 1658517787
     stepItems: []
-    id: '0xa62e23af959a9a40fa671da03aa0a013905e30707763910f492ef753f445349b'
     name: Why another course?
     order: 0
     uuid: 7c7630f3-9bfb-4c9e-8bbe-3b9932c07a07
   - content: ''
-    created: 1658512371
     stepItems:
-      - __typename: GuideQuestion
-        answerKeys:
+      - answerKeys:
           - dog_or_cat
           - only_dog
         choices:
@@ -62,7 +58,6 @@ steps:
         order: 0
         type: MultipleChoice
         uuid: 951c2561-47e5-48cd-baec-0a3875b087cb
-    id: '0xd2b48636453d2a3f6d8a3230fc6a2ada1bba64279f246514eb88f1f627aa23ba'
     name: Evaluation
     order: 1
     uuid: 36360d18-0db0-4880-ac8b-8231dff4eed8
@@ -80,17 +75,13 @@ steps:
       allow skipping of parts of the video and also show questions on top of videos
       \n\nNote: Please recommend at least one idea in the #discussions channel under
       courses\n"
-    created: 1658763127
     stepItems: []
-    id: '0xc71a5a7650360e42bd11590222923ec8966cc32cf884570f9611f461ac067bd3'
     name: How are our Courses different?
     order: 2
     uuid: 3eff00c5-7b99-4100-ad6e-5ad9c900c739
   - content: ''
-    created: 1658512371
     stepItems:
-      - __typename: GuideQuestion
-        answerKeys:
+      - answerKeys:
           - 8a087cda
           - ee74f525
         choices:
@@ -110,7 +101,6 @@ steps:
         order: 0
         type: MultipleChoice
         uuid: ebc0438f-a46f-48b7-aab5-ffed6ac664e4
-    id: '0xaf9a9adaca6fc60b65a1581485128e2f3345cb67e9c5035dfa327ee3a31bbf14'
     name: Evaluation
     order: 3
     uuid: 4f189ddb-9f74-4b55-b406-e1a6296cb7d6
@@ -125,9 +115,7 @@ steps:
       \n3. Questions - About 50 high quality single or multiple choice questions for
       each chapter. We want to write max 2-3 true/false questions. Almost in all cases
       the question should have at least 4 choices."
-    created: 1658517787
     stepItems: []
-    id: '0x84700051e76bd3998546600d4244f626b5a8739c8a9cbc963a8ee9e5036bb84b'
     name: What is included in a course?
     order: 4
     uuid: f5ef2b90-51d2-4b95-8f25-ba3047436c26
@@ -135,9 +123,7 @@ steps:
       Here is the list of courses that we will start with. We will be adding more to the list as we get more clarity
       
       ![Courses](https://raw.githubusercontent.com/DoDAO-io/dodao-guide-images/main/ETH/DoDAO/Couse%20Contributor/image.png)
-    created: 1658517143
     stepItems: []
-    id: '0x89ed50ee9f39218f339bfee8729e5b5a2d70c17c7838a2ba8afc098b87ef61fe'
     name: 'What courses will we write?   '
     order: 5
     uuid: 64f91c87-47b2-4bf0-a54c-b815a1e8c827
@@ -150,17 +136,13 @@ steps:
       on we will add another task i.e. creating of the mind maps for each chapter, but
       for now its not needed. \n\nAlso make sure that your name is added on a Trello
       card corresponding to the task you are working on."
-    created: 1658517787
     stepItems: []
-    id: '0xcc0fbebf1796972ade0aca34811b49f2f7e632bf2711fffb53ee20ed0bf1fb6f'
     name: Contributing
     order: 6
     uuid: bd8f0b48-4e61-478a-b275-68e3c93db760
   - content: ''
-    created: 1658517787
     stepItems:
-      - __typename: GuideQuestion
-        answerKeys:
+      - answerKeys:
           - 90420cff
           - 2a0ac8ef
         choices:
@@ -181,8 +163,7 @@ steps:
         order: 0
         type: MultipleChoice
         uuid: f12c2758-858d-4fe4-9560-f4dd9454f89a
-      - __typename: GuideQuestion
-        answerKeys:
+      - answerKeys:
           - 86cd5c4a
         choices:
           - content: Github
@@ -201,12 +182,10 @@ steps:
         order: 1
         type: SingleChoice
         uuid: 2b8c3034-6c98-4d60-9741-f78efe71d6ad
-    id: '0xc496657304dd2ad37e17cbc8295d164e26ce8f0e2009ed5216e82e2b7b9402e3'
     name: Evaluation
     order: 7
     uuid: 227e9138-ddae-4ab2-9740-a83185833d33
   - content: Create an account on Trello as we use that for task management [https://trello.com](https://trello.com)
-    created: 1658683692
     stepItems:
       - uuid: 5e025ae8-daf2-4074-8e6c-68de05d3e5cc
         label: Name
@@ -229,8 +208,6 @@ steps:
       - uuid: 0d3bf837-e661-43b3-ba85-6d2ebb272be5
         order: 3
         type: UserDiscordConnect
-
-    id: '0xb4ac732ea9e8476b16135b92591b076be34e6e07dc0712304e97554997fd9adc'
     name: Your Info
     order: 8
     uuid: 4ea13235-65e1-4169-aeb8-a28bf7306716
