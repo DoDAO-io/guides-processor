@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "label" : {
+      "type": "string",
+      "maxLength": 20
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "PublicShortInput",
+        "PrivateShortInput"
+      ]
+    }
+  },
+  "required": [
+    "uuid",
+    "order",
+    "type"
+  ],
+  "additionalProperties": false
+}

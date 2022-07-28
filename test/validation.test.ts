@@ -1,7 +1,7 @@
-import { validateCourseFile } from '../src/validation/validateCourseFile';
+import { validateGuide } from './../src/validation/validateGuide';
 
 describe('validate course', () => {
   it('should pass for the course file', () => {
-    validateCourseFile(__dirname + '/dummy-course/src/course.yaml');
+    validateGuide(__dirname + '/dummy-guides/src/course-contributor.yaml');
   });
 });

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "postSubmissionStepContent": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "guideIntegrations": {
+      "$ref": "/GuideIntegrationsSchema"
+    },
+    "guideType": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "showIncorrectOnCompletion": {
+      "type": "boolean"
+    },
+    "steps": {
+      "type": "array",
+      "items": [
+        {
+          "$ref": "/GuideStepSchema"
+        }
+      ]
+    },
+    "publishStatus": {
+      "type": "string"
+    },
+    "socialShareImage": {
+      "type": "null"
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "categories",
+    "content",
+    "created",
+    "guideType",
+    "name",
+    "showIncorrectOnCompletion",
+    "steps",
+    "publishStatus",
+    "socialShareImage",
+    "thumbnail",
+    "uuid"
+  ],
+  "additionalProperties": false
+}

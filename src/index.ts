@@ -1,10 +1,7 @@
 import { Command } from 'commander';
 import process from 'process';
 import { generateCourseFiles } from './generators/generateCourseFiles';
-import { validateCourseFile } from './validation/validateCourseFile';
-import { validateQuestionFiles } from './validation/validateQuestionFiles';
-import { validateReadingsFiles } from './validation/validateReadingsFiles';
-import { validateSummariesFiles } from './validation/validateSummariesFiles';
+import { validateGuide } from './validation/validateGuide';
 import { validateUniqueUUIDs } from './validation/validateUniqueUUIDs';
 
 const program = new Command();
@@ -12,10 +9,7 @@ const program = new Command();
 export function validateFilesAndGenerateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
-  validateCourseFile(`${courseDirPath}/course.yaml`);
-  validateSummariesFiles(`${courseDirPath}/summaries`);
-  validateQuestionFiles(`${courseDirPath}/questions`);
-  validateReadingsFiles(`${courseDirPath}/readings`);
+  validateGuide(`${courseDirPath}/course.yaml`);
   validateUniqueUUIDs(
     `${courseDirPath}/summaries`,
     `${courseDirPath}/readings`,
@@ -29,10 +23,7 @@ export function validateFilesAndGenerateFiles(srcPath: string) {
 export function validateFiles(srcPath: string) {
   const courseDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
-  validateCourseFile(`${courseDirPath}/course.yaml`);
-  validateSummariesFiles(`${courseDirPath}/summaries`);
-  validateQuestionFiles(`${courseDirPath}/questions`);
-  validateReadingsFiles(`${courseDirPath}/readings`);
+  validateGuide(`${courseDirPath}/course.yaml`);
   validateUniqueUUIDs(
     `${courseDirPath}/summaries`,
     `${courseDirPath}/readings`,

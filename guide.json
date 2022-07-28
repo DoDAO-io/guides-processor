@@ -1,0 +1,285 @@
+{
+  "authors": [
+    "0x470579d16401a36BF63b1428eaA7189FBdE5Fee9"
+  ],
+  "categories": [
+    "developer",
+    "engineering"
+  ],
+  "postSubmissionStepContent": null,
+  "content": "Explains why and what courses are we working on",
+  "created": 1658763127,
+  "id": "0x25932559fba2f9be7d42408392b55f30b8be125fd981787d52c63c57644a5cc9",
+  "guideIntegrations": {
+    "discordRoleIds": [],
+    "discordRolePassingCount": null,
+    "discordWebhook": null,
+    "projectGalaxyCredentialId": null,
+    "projectGalaxyOatMintUrl": null,
+    "projectGalaxyOatPassingCount": null
+  },
+  "guideType": "onboarding",
+  "ipfs": "QmV7szdq1P9LtkKc4uPthh5jrRNHwgtYZXG3TgjoyAXpky",
+  "link": "https://eth.dodao.io/dodao-1/guide/view/0x25932559fba2f9be7d42408392b55f30b8be125fd981787d52c63c57644a5cc9",
+  "name": "Course Contributor",
+  "previousId": "0x655531cc47f225727b2d6e47a0796f2cc7c2f90677cd2462aa1f09cb5347fc4c",
+  "showIncorrectOnCompletion": true,
+  "space": {
+    "id": "dodao-1",
+    "name": "DoDAO"
+  },
+  "steps": [
+    {
+      "content": "\nThere are already so many blockchain courses then why do we need another course? \n\nThe reason are\n\n1. There are definitely some basic courses, but there are only a few courses that cover advanced Developer Concepts & Tools, DeFi, or NFT topics.\n2. We want to cover all the advanced topics in DoDAO and to be able to write advanced courses, we need to have basic information/courses in place first.\n3. Once done with basic topics, we will work on the advanced topics.\n4. DoDAO is an onboarding platform, i.e. we educate the users about various projects. Understanding these blockchain projects needs a lot of basic blockchain knowledge. These courses can then be reused when we develop onboarding content for various projects.\n \nNote: We would want our courses to be completely free for everyone and forever.   ",
+      "created": 1658517787,
+      "stepItems": [],
+      "id": "0xa62e23af959a9a40fa671da03aa0a013905e30707763910f492ef753f445349b",
+      "name": "Why another course?",
+      "order": 0,
+      "uuid": "7c7630f3-9bfb-4c9e-8bbe-3b9932c07a07"
+    },
+    {
+      "content": "",
+      "created": 1658512371,
+      "stepItems": [
+        {
+          "__typename": "GuideQuestion",
+          "answerKeys": [
+            "dog_or_cat",
+            "only_dog"
+          ],
+          "choices": [
+            {
+              "content": "We can to evaluate the students who apply for internships",
+              "key": "dog_and_cat",
+              "order": 0
+            },
+            {
+              "content": "DoDAO is an onboarding platform and a lot of course content can then be reused when we develop onboarding content for various projects",
+              "key": "dog_or_cat",
+              "order": 1
+            },
+            {
+              "content": "There are not that many courses that cover advanced topics",
+              "key": "only_dog",
+              "order": 2
+            },
+            {
+              "content": "DoDAO's business model is to earn through courses",
+              "key": "only_cat",
+              "order": 3
+            }
+          ],
+          "content": "Why are we writing courses in DoDAO?",
+          "order": 0,
+          "type": "MultipleChoice",
+          "uuid": "951c2561-47e5-48cd-baec-0a3875b087cb"
+        }
+      ],
+      "id": "0xd2b48636453d2a3f6d8a3230fc6a2ada1bba64279f246514eb88f1f627aa23ba",
+      "name": "Evaluation",
+      "order": 1,
+      "uuid": "36360d18-0db0-4880-ac8b-8231dff4eed8"
+    },
+    {
+      "content": "There are many video courses, but these is less focus on creating summarized content and on creating questions bank. \n\nSo our focus is to reuse the videos from youtube, but create high quality summaries and question banks.\n\nThere were couple of suggestions which we will also include\n\n1. Create mind maps - Suggestion by Lakshya. This can be done after we are done with all the chapters. We will create mind map for each chapter and this will be paid work.\n\n2. Incentivize course completion - Allow users to download all the mind-maps once they complete the full course. This was recommended by Raghav\n\n3. Assignments and Solutions - Add 2-4 assignments for each chapter with the solutions.\n\n4. Video Annotations - Annotating the Youtube Videos with relevant timestamps and questions. We will allow skipping of parts of the video and also show questions on top of videos \n\nNote: Please recommend at least one idea in the #discussions channel under courses\n",
+      "created": 1658763127,
+      "stepItems": [],
+      "id": "0xc71a5a7650360e42bd11590222923ec8966cc32cf884570f9611f461ac067bd3",
+      "name": "How are our Courses different?",
+      "order": 2,
+      "uuid": "3eff00c5-7b99-4100-ad6e-5ad9c900c739"
+    },
+    {
+      "content": "",
+      "created": 1658512371,
+      "stepItems": [
+        {
+          "__typename": "GuideQuestion",
+          "answerKeys": [
+            "8a087cda",
+            "ee74f525"
+          ],
+          "choices": [
+            {
+              "content": "They don't  cover the details",
+              "key": "e197fff9",
+              "order": 0
+            },
+            {
+              "content": "There is no summarized content which you can refer to for Youtube Courses",
+              "key": "8a087cda",
+              "order": 1
+            },
+            {
+              "content": "Youtube courses are not technical and don't cover code ",
+              "key": "02db294f",
+              "order": 2
+            },
+            {
+              "content": "There are no question banks to evaluate the knowledge gained",
+              "key": "ee74f525",
+              "order": 3
+            }
+          ],
+          "content": "For the courses currently available on youtube, what is missing?",
+          "order": 0,
+          "type": "MultipleChoice",
+          "uuid": "ebc0438f-a46f-48b7-aab5-ffed6ac664e4"
+        }
+      ],
+      "id": "0xaf9a9adaca6fc60b65a1581485128e2f3345cb67e9c5035dfa327ee3a31bbf14",
+      "name": "Evaluation",
+      "order": 3,
+      "uuid": "4f189ddb-9f74-4b55-b406-e1a6296cb7d6"
+    },
+    {
+      "content": "Our basic courses will consist of 6-10 chapters and in each chapter we will cover\n\n1. Readings - we call it readings, but this is the list of videos one can watch on Youtube to know about the topic. We should capture max of 3-4 videos for each chapter.\n2. Summaries - This is a list of sub-topics in a chapter which we will summarize. Intent is the user can revise each and every concept in the chapter by going through the bullet points. Please look at \"Two Minute Drill\" sections in SCJP book ([https://firozstar.tripod.com/_darksiderg.pdf](https://firozstar.tripod.com/_darksiderg.pdf)) \n3. Questions - About 50 high quality single or multiple choice questions for each chapter. We want to write max 2-3 true/false questions. Almost in all cases the question should have at least 4 choices.",
+      "created": 1658517787,
+      "stepItems": [],
+      "id": "0x84700051e76bd3998546600d4244f626b5a8739c8a9cbc963a8ee9e5036bb84b",
+      "name": "What is included in a course?",
+      "order": 4,
+      "uuid": "f5ef2b90-51d2-4b95-8f25-ba3047436c26"
+    },
+    {
+      "content": "Here is the list of courses that we will start with. We will be adding more to the list as we get more clarity\n\n![Courses](https://raw.githubusercontent.com/DoDAO-io/dodao-guide-images/main/ETH/DoDAO/Couse%20Contributor/image.png)",
+      "created": 1658517143,
+      "stepItems": [],
+      "id": "0x89ed50ee9f39218f339bfee8729e5b5a2d70c17c7838a2ba8afc098b87ef61fe",
+      "name": "What courses will we write?   ",
+      "order": 5,
+      "uuid": "64f91c87-47b2-4bf0-a54c-b815a1e8c827"
+    },
+    {
+      "content": "Currently contributing to courses involves working on a chapter which has \"two\" tasks\n1. Readings and Summaries - Create yaml file with details of readings and summaries for that chapter. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/summaries/data_types.yaml)\n2. Questions - Create 50 high quality single or multiple choice questions for the chapter you are working on. e.g. [https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml](https://github.com/DoDAO-io/dodao-solidity-course/blob/main/src/questions/data_types.yaml)\n\nLater on we will add another task i.e. creating of the mind maps for each chapter, but for now its not needed. \n\nAlso make sure that your name is added on a Trello card corresponding to the task you are working on.",
+      "created": 1658517787,
+      "stepItems": [],
+      "id": "0xcc0fbebf1796972ade0aca34811b49f2f7e632bf2711fffb53ee20ed0bf1fb6f",
+      "name": "Contributing",
+      "order": 6,
+      "uuid": "bd8f0b48-4e61-478a-b275-68e3c93db760"
+    },
+    {
+      "content": "",
+      "created": 1658517787,
+      "stepItems": [
+        {
+          "__typename": "GuideQuestion",
+          "answerKeys": [
+            "90420cff",
+            "2a0ac8ef"
+          ],
+          "choices": [
+            {
+              "content": "Create a youtube video",
+              "key": "9f14e5c3",
+              "order": 0
+            },
+            {
+              "content": "Create yaml file with readings and summaries",
+              "key": "2a0ac8ef",
+              "order": 1
+            },
+            {
+              "content": "Create yaml file for questions",
+              "key": "90420cff",
+              "order": 2
+            },
+            {
+              "content": "Create a mind map",
+              "key": "2d9e55e8",
+              "order": 3
+            }
+          ],
+          "content": "What two tasks are currently part of the work involved for a chapter of a course?",
+          "order": 0,
+          "type": "MultipleChoice",
+          "uuid": "f12c2758-858d-4fe4-9560-f4dd9454f89a"
+        },
+        {
+          "__typename": "GuideQuestion",
+          "answerKeys": [
+            "86cd5c4a"
+          ],
+          "choices": [
+            {
+              "content": "Github",
+              "key": "91473ca8",
+              "order": 0
+            },
+            {
+              "content": "Trello",
+              "key": "86cd5c4a",
+              "order": 1
+            },
+            {
+              "content": "Jira",
+              "key": "009edcb4",
+              "order": 2
+            },
+            {
+              "content": "Dework",
+              "key": "5f91a3eb",
+              "order": 3
+            }
+          ],
+          "content": "Before starting on a task make sure your name is added to a task on _____",
+          "order": 1,
+          "type": "SingleChoice",
+          "uuid": "2b8c3034-6c98-4d60-9741-f78efe71d6ad"
+        }
+      ],
+      "id": "0xc496657304dd2ad37e17cbc8295d164e26ce8f0e2009ed5216e82e2b7b9402e3",
+      "name": "Evaluation",
+      "order": 7,
+      "uuid": "227e9138-ddae-4ab2-9740-a83185833d33"
+    },
+    {
+      "content": "Create an account on Trello as we use that for task management [https://trello.com](https://trello.com)",
+      "created": 1658683692,
+      "stepItems": [
+        {
+          "__typename": "GuideUserInput",
+          "label": "Name",
+          "order": 0,
+          "required": true,
+          "type": "PublicShortInput",
+          "uuid": "5e025ae8-daf2-4074-8e6c-68de05d3e5cc"
+        },
+        {
+          "__typename": "GuideUserInput",
+          "label": "Trello Username",
+          "order": 1,
+          "required": true,
+          "type": "PublicShortInput",
+          "uuid": "0de9f39c-acb1-4835-8f8c-75ba0e22ffad"
+        },
+        {
+          "__typename": "GuideUserInput",
+          "label": "Github Username",
+          "order": 2,
+          "required": true,
+          "type": "PublicShortInput",
+          "uuid": "54f694d3-da65-4137-83a1-c8ae2e6b0e16"
+        },
+        {
+          "__typename": "UserDiscordConnect",
+          "order": 3,
+          "type": "UserDiscordConnect",
+          "uuid": "0d3bf837-e661-43b3-ba85-6d2ebb272be5"
+        }
+      ],
+      "id": "0xb4ac732ea9e8476b16135b92591b076be34e6e07dc0712304e97554997fd9adc",
+      "name": "Your Info",
+      "order": 8,
+      "uuid": "4ea13235-65e1-4169-aeb8-a28bf7306716"
+    }
+  ],
+  "publishStatus": "Live",
+  "socialShareImage": null,
+  "thumbnail": "ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8",
+  "uuid": "02103121-0601-4bcf-aea4-05effa366b5f",
+  "version": 10,
+  "__typename": "Guide"
+}
