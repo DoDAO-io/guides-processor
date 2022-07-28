@@ -12,15 +12,15 @@
     "stepItems": {
       "type": "array",
       "items": {
-        "oneOf": [
+        "anyOf": [
           {
-            "$ref": "questionSchema.json"
+            "$ref": "/QuestionSchema"
           },
           {
-            "$ref": "userInputSchema.json"
+            "$ref": "/UserInputSchema"
           },
           {
-            "$ref": "discordConnectSchema.json"
+            "$ref": "/DiscordConnectSchema"
           }
         ]
       }
