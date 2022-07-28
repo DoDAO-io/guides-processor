@@ -1,10 +1,7 @@
-import {GuideModel} from "../model/GuideModel";
+import { GitGuideModel } from '../model/GitGuideModel';
 
-export function validateUniqueUUIDs(
-  guideJson: GuideModel,
-) {
+export function validateUniqueUUIDs(guideJson: GitGuideModel) {
   const uuids: string[] = [guideJson.uuid];
-
 
   guideJson.steps.forEach(step => {
     if (uuids.includes(step.uuid)) {

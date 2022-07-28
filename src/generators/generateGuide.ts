@@ -1,21 +1,16 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import {GuideToGenerate} from "../model/GuideToGenerate";
-import {
-  GuideModel,
-  GuideQuestion,
-  UserDiscordConnect,
-  UserInput,
-  isQuestion,
-  QuestionChoice, isUserInput
-} from "../model/GuideModel";
+import { GitGuideQuestion, GitQuestionChoice } from '../model/GitGuideQuestion';
+import { GitUserInput } from '../model/GitUserInput';
+import { GitUserDiscordConnect } from '../model/StepItemType';
+import { GuideToGenerate } from '../model/GuideToGenerate';
+import { GitGuideModel, isQuestion, isUserInput } from '../model/GitGuideModel';
 import YAML from 'yaml';
-import {writeFileSync} from '../utils/writeFileSync';
-
+import { writeFileSync } from '../utils/writeFileSync';
 
 const choicesMarkdown = (
   answerKeys: string[],
-  choices: QuestionChoice[]
+  choices: GitQuestionChoice[]
 ): string => {
   return choices
     .map(choice => {
@@ -25,10 +20,12 @@ const choicesMarkdown = (
     .join('\n');
 };
 
-export function generateStepItem(stepItem: GuideQuestion | UserInput | UserDiscordConnect) {
-  if(isQuestion(stepItem)) {
-   const question = stepItem as GuideQuestion;
-return dedent`
+export function generateStepItem(
+  stepItem: GitGuideQuestion | GitUserInput | GitUserDiscordConnect
+) {
+  if (isQuestion(stepItem)) {
+    const question = stepItem as GitGuideQuestion;
+    return dedent`
 
 
 ##### ${question.content}  
@@ -36,19 +33,22 @@ return dedent`
 ${choicesMarkdown(question.answerKeys, question.choices)}
 
 
-`
-  } else if(isUserInput(stepItem)) {
-
-    const userInput = stepItem as UserInput
+`;
+  } else if (isUserInput(stepItem)) {
+    const userInput = stepItem as GitUserInput;
     return dedent`
 
-| ${userInput.label}        | ${userInput.type}       |
-| ----------- | ----------- |
-`
-  } else {
-    return ''
-  }
 
+| Label | Type | Required |
+| ----------- | ----------- | ---- |
+| ${userInput.label}        | ${userInput.type}   |  ${userInput.required}    |
+
+
+
+`;
+  } else {
+    return '';
+  }
 }
 
 export function generateGuide(
@@ -56,11 +56,8 @@ export function generateGuide(
   srcDirPath: string,
   guideToGenerate: GuideToGenerate
 ) {
-  const file = fs.readFileSync(
-    `${srcDirPath}/${guideToGenerate.path}`,
-    'utf8'
-  );
-  const guideJson = YAML.parse(file) as GuideModel;
+  const file = fs.readFileSync(`${srcDirPath}/${guideToGenerate.path}`, 'utf8');
+  const guideJson = YAML.parse(file) as GitGuideModel;
 
   const courseReadmeContents = dedent`${header}
 ---
@@ -68,21 +65,21 @@ export function generateGuide(
 ## ${guideJson.name}
 
 ${guideJson.steps
-.map(step => {
-  return dedent`
+  .map(step => {
+    return dedent`
 
 ## ${step.name}
 
 ${step.content}
 
-${step.stepItems.map(stepItem => generateStepItem(stepItem))}    
+${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}    
 
 `;
-    })
-    .join('\n\n---\n ')}
+  })
+  .join('\n\n---')}
     
    
-    `;
+`;
 
   writeFileSync(
     // prettier-ignore

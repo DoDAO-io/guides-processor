@@ -1,7 +1,7 @@
-import {Command} from 'commander';
+import { Command } from 'commander';
 import process from 'process';
-import {generateGuideFiles} from './generators/generateGuideFiles';
-import {validateGuides} from './validation/validateGuide';
+import { generateGuideFiles } from './generators/generateGuideFiles';
+import { validateGuides } from './validation/validateGuide';
 
 const program = new Command();
 
