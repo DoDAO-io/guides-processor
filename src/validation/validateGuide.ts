@@ -1,4 +1,5 @@
 import fs from 'fs';
+import {validateUniqueUUIDs} from "./validateUniqueUUIDs";
 import { throwValidationError } from './throwValidationError';
 import YAML from 'yaml';
 import { Validator } from 'jsonschema';
@@ -26,6 +27,17 @@ export function validateGuide(guideFilePath: string) {
   if (!res.valid || res.errors.length > 0) {
     throwValidationError(guideFilePath, res.errors);
   }
+
+  validateUniqueUUIDs(guideJson)
+
+
+}
+
+
+export function validateGuides(srcDirPath: string) {
+  const file = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
+  const guideJson = YAML.parse(file);
+  console.log(guideJson)
 
 
 }

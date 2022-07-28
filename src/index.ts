@@ -1,34 +1,24 @@
-import { Command } from 'commander';
+import {Command} from 'commander';
 import process from 'process';
-import { generateCourseFiles } from './generators/generateCourseFiles';
-import { validateGuide } from './validation/validateGuide';
-import { validateUniqueUUIDs } from './validation/validateUniqueUUIDs';
+import {generateGuideFiles} from './generators/generateGuideFiles';
+import {validateGuides} from './validation/validateGuide';
 
 const program = new Command();
 
-export function validateFilesAndGenerateFiles(srcPath: string) {
-  const courseDirPath = process.cwd() + '/' + srcPath;
+export function validateAndGenerateFiles(srcPath: string) {
+  const srcDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
-  validateGuide(`${courseDirPath}/course.yaml`);
-  validateUniqueUUIDs(
-    `${courseDirPath}/summaries`,
-    `${courseDirPath}/readings`,
-    `${courseDirPath}/questions`
-  );
+  validateGuides(srcDirPath);
+
   console.log('Congrats! Everything looks good!');
 
-  generateCourseFiles(courseDirPath);
+  generateGuideFiles(srcDirPath);
 }
 
 export function validateFiles(srcPath: string) {
-  const courseDirPath = process.cwd() + '/' + srcPath;
+  const srcDirPath = process.cwd() + '/' + srcPath;
   console.log('Validating Course...');
-  validateGuide(`${courseDirPath}/course.yaml`);
-  validateUniqueUUIDs(
-    `${courseDirPath}/summaries`,
-    `${courseDirPath}/readings`,
-    `${courseDirPath}/questions`
-  );
+  validateGuides(srcDirPath);
   console.log('Congrats! Everything looks good!');
 }
 
@@ -42,7 +32,7 @@ program
   .description('Generates both the markdown and JSON metadata for the course')
   .argument('<path>', 'path of the course folder')
   .action(async path => {
-    validateFilesAndGenerateFiles(path);
+    validateAndGenerateFiles(path);
   });
 
 program
