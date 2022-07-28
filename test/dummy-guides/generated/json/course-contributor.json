@@ -138,7 +138,6 @@
             }
           ],
           "content": "What two tasks are currently part of the work involved for a chapter of a course?",
-          "order": 0,
           "type": "MultipleChoice",
           "uuid": "f12c2758-858d-4fe4-9560-f4dd9454f89a"
         },
