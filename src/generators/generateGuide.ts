@@ -86,4 +86,10 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
     `${srcDirPath}/../generated/markdown/${guideToGenerate.key}.md`,
     courseReadmeContents
   );
+
+  writeFileSync(
+    // prettier-ignore
+    `${srcDirPath}/../generated/json/${guideToGenerate.key}.json`,
+    JSON.stringify(guideJson, null, 2)
+  );
 }
