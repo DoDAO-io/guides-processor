@@ -33,7 +33,6 @@ steps:
       and forever.
     stepItems: []
     name: Why another course?
-    order: 0
     uuid: 7c7630f3-9bfb-4c9e-8bbe-3b9932c07a07
   - content: ''
     stepItems:
@@ -43,23 +42,17 @@ steps:
         choices:
           - content: We can to evaluate the students who apply for internships
             key: dog_and_cat
-            order: 0
           - content: DoDAO is an onboarding platform and a lot of course content can then
               be reused when we develop onboarding content for various projects
             key: dog_or_cat
-            order: 1
           - content: There are not that many courses that cover advanced topics
             key: only_dog
-            order: 2
           - content: DoDAO's business model is to earn through courses
             key: only_cat
-            order: 3
         content: Why are we writing courses in DoDAO?
-        order: 0
         type: MultipleChoice
         uuid: 951c2561-47e5-48cd-baec-0a3875b087cb
     name: Evaluation
-    order: 1
     uuid: 36360d18-0db0-4880-ac8b-8231dff4eed8
   - content: |
       "There are many video courses, but these is less focus on creating summarized
@@ -77,7 +70,6 @@ steps:
       courses"
     stepItems: []
     name: How are our Courses different?
-    order: 2
     uuid: 3eff00c5-7b99-4100-ad6e-5ad9c900c739
   - content: ''
     stepItems:
@@ -87,22 +79,16 @@ steps:
         choices:
           - content: They don't  cover the details
             key: e197fff9
-            order: 0
           - content: There is no summarized content which you can refer to for Youtube Courses
             key: 8a087cda
-            order: 1
           - content: 'Youtube courses are not technical and don''t cover code '
             key: 02db294f
-            order: 2
           - content: There are no question banks to evaluate the knowledge gained
             key: ee74f525
-            order: 3
         content: For the courses currently available on youtube, what is missing?
-        order: 0
         type: MultipleChoice
         uuid: ebc0438f-a46f-48b7-aab5-ffed6ac664e4
     name: Evaluation
-    order: 3
     uuid: 4f189ddb-9f74-4b55-b406-e1a6296cb7d6
   - content: |
       "Our basic courses will consist of 6-10 chapters and in each chapter we
@@ -117,7 +103,6 @@ steps:
       the question should have at least 4 choices."
     stepItems: []
     name: What is included in a course?
-    order: 4
     uuid: f5ef2b90-51d2-4b95-8f25-ba3047436c26
   - content: |-
       Here is the list of courses that we will start with. We will be adding more to the list as we get more clarity
@@ -125,7 +110,6 @@ steps:
       ![Courses](https://raw.githubusercontent.com/DoDAO-io/dodao-guide-images/main/ETH/DoDAO/Couse%20Contributor/image.png)
     stepItems: []
     name: What courses will we write?
-    order: 5
     uuid: 64f91c87-47b2-4bf0-a54c-b815a1e8c827
   - content: | 
       Currently contributing to courses involves working on a chapter which
@@ -138,7 +122,6 @@ steps:
       card corresponding to the task you are working on.
     stepItems: []
     name: Contributing
-    order: 6
     uuid: bd8f0b48-4e61-478a-b275-68e3c93db760
   - content: ''
     stepItems:
@@ -148,16 +131,12 @@ steps:
         choices:
           - content: Create a youtube video
             key: 9f14e5c3
-            order: 0
           - content: Create yaml file with readings and summaries
             key: 2a0ac8ef
-            order: 1
           - content: Create yaml file for questions
             key: 90420cff
-            order: 2
           - content: Create a mind map
             key: 2d9e55e8
-            order: 3
         content: What two tasks are currently part of the work involved for a chapter
           of a course?
         order: 0
@@ -168,46 +147,35 @@ steps:
         choices:
           - content: Github
             key: 91473ca8
-            order: 0
           - content: Trello
             key: 86cd5c4a
-            order: 1
           - content: Jira
             key: '009edcb4'
-            order: 2
           - content: Dework
             key: 5f91a3eb
-            order: 3
         content: Before starting on a task make sure your name is added to a task on _____
-        order: 1
         type: SingleChoice
         uuid: 2b8c3034-6c98-4d60-9741-f78efe71d6ad
     name: Evaluation
-    order: 7
     uuid: 227e9138-ddae-4ab2-9740-a83185833d33
   - content: Create an account on Trello as we use that for task management [https://trello.com](https://trello.com)
     stepItems:
       - uuid: 5e025ae8-daf2-4074-8e6c-68de05d3e5cc
         label: Name
-        order: 0
         required: true
         type: PublicShortInput
 
       - uuid: 0de9f39c-acb1-4835-8f8c-75ba0e22ffad
         label: Trello Username
-        order: 1
         required: true
         type: PublicShortInput
 
       - uuid: 54f694d3-da65-4137-83a1-c8ae2e6b0e16
         label: Github Username
-        order: 2
         required: true
         type: PublicShortInput
 
       - uuid: 0d3bf837-e661-43b3-ba85-6d2ebb272be5
-        order: 3
         type: UserDiscordConnect
     name: Your Info
-    order: 8
     uuid: 4ea13235-65e1-4169-aeb8-a28bf7306716

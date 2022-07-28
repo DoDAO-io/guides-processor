@@ -27,9 +27,6 @@
       "name": {
         "type": "string"
       },
-      "order": {
-        "type": "integer"
-      },
       "uuid": {
         "type": "string"
       }
@@ -38,7 +35,6 @@
       "content",
       "stepItems",
       "name",
-      "order",
       "uuid"
     ],
     "additionalProperties": false

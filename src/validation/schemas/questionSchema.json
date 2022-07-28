@@ -6,9 +6,6 @@
     "uuid": {
       "type": "string"
     },
-    "order": {
-      "type": "number"
-    },
     "type": {
       "enum": [
         "MultipleChoice",
@@ -95,7 +92,6 @@
   },
   "required": [
     "uuid",
-    "order",
     "type",
     "content",
     "answerKeys",

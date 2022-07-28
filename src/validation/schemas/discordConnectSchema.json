@@ -6,9 +6,6 @@
     "uuid": {
       "type": "string"
     },
-    "order" : {
-      "type": "integer"
-    },
     "type": {
       "type": "string",
       "enum": ["UserDiscordConnect"]
@@ -16,7 +13,6 @@
   },
   "required": [
     "uuid",
-    "order",
     "type"
   ],
   "additionalProperties": false
