@@ -32,8 +32,6 @@
       }
     },
     "required": [
-      "content",
-      "stepItems",
       "name",
       "uuid"
     ],

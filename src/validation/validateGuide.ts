@@ -28,14 +28,13 @@ export function validateGuide(guideFilePath: string) {
   if (!res.valid || res.errors.length > 0) {
     throwValidationError(guideFilePath, res.errors);
   }
-
-  validateUniqueUUIDs(guideJson);
 }
 
 export function validateGuides(srcDirPath: string) {
   const file = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
   const guideJson = YAML.parse(file).guides as GuideToGenerate[];
 
+  validateUniqueUUIDs(srcDirPath, guideJson);
   guideJson.forEach(guide => {
     validateGuide(`${srcDirPath}/${guide.path}`);
   });
