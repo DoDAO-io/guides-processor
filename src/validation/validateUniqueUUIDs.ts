@@ -1,16 +1,12 @@
 import fs from 'fs';
 import YAML from 'yaml';
 import { GitGuideModel } from '../model/GitGuideModel';
-import { GuideToGenerate } from '../model/GuideToGenerate';
 
-export function validateUniqueUUIDs(
-  srcDirPath: string,
-  guidesJson: GuideToGenerate[]
-) {
+export function validateUniqueUUIDs(srcDirPath: string, guidesJson: string[]) {
   const uuids: string[] = [];
 
   guidesJson.forEach(guide => {
-    const guideFilePath = `${srcDirPath}/${guide.path}`;
+    const guideFilePath = `${srcDirPath}/${guide}`;
     const file = fs.readFileSync(guideFilePath, 'utf8');
     const guideJson = YAML.parse(file) as GitGuideModel;
     if (uuids.includes(guideJson.uuid)) {

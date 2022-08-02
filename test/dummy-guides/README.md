@@ -5,6 +5,6 @@ This is the course header. This will be added on top of every page. Go to [DoDAO
 
 ## Guides
 
-| S.No        | Title       |  Link  |
-| ----------- | ----------- |----------- |
-| 1      | course-contributor |  [Link](generated/markdown/course-contributor.md) | 
+| S.No        | Title       |  Details  |  Link  |
+| ----------- | ----------- |----------- | ----------- |
+| 1      | Course Contributor | Explains why and what courses are we working on |  [Link](generated/markdown/course-contributor.md) | 

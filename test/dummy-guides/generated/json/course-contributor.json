@@ -6,6 +6,7 @@
   "content": "Explains why and what courses are we working on",
   "created": "1658763127",
   "guideType": "onboarding",
+  "key": "course-contributor",
   "name": "Course Contributor",
   "showIncorrectOnCompletion": true,
   "publishStatus": "Live",

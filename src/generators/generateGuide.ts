@@ -3,7 +3,6 @@ import fs from 'fs';
 import { GitGuideQuestion, GitQuestionChoice } from '../model/GitGuideQuestion';
 import { GitUserInput } from '../model/GitUserInput';
 import { GitUserDiscordConnect } from '../model/StepItemType';
-import { GuideToGenerate } from '../model/GuideToGenerate';
 import { GitGuideModel, isQuestion, isUserInput } from '../model/GitGuideModel';
 import YAML from 'yaml';
 import { writeFileSync } from '../utils/writeFileSync';
@@ -54,9 +53,9 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
 export function generateGuide(
   header: string,
   srcDirPath: string,
-  guideToGenerate: GuideToGenerate
+  guideToGenerate: string
 ) {
-  const file = fs.readFileSync(`${srcDirPath}/${guideToGenerate.path}`, 'utf8');
+  const file = fs.readFileSync(`${srcDirPath}/${guideToGenerate}`, 'utf8');
   const guideJson = YAML.parse(file) as GitGuideModel;
 
   const courseReadmeContents = dedent`${header}
@@ -82,12 +81,12 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
 `;
 
   writeFileSync(
-    `${srcDirPath}/../generated/markdown/${guideToGenerate.key}.md`,
+    `${srcDirPath}/../generated/markdown/${guideJson.key}.md`,
     courseReadmeContents
   );
 
   writeFileSync(
-    `${srcDirPath}/../generated/json/${guideToGenerate.key}.json`,
+    `${srcDirPath}/../generated/json/${guideJson.key}.json`,
     JSON.stringify(guideJson, null, 2)
   );
 }

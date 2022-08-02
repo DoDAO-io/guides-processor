@@ -1,3 +1,2 @@
 guides:
-  - key: course-contributor
-    path: course-contributor.yaml
+  - course-contributor.yaml

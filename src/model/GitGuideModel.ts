@@ -33,6 +33,7 @@ export interface GitGuideModel {
   created: string;
   guideIntegrations?: GitGuideIntegrations;
   guideType: GuideType;
+  key: string;
   name: string;
   postSubmissionStepContent?: string;
   publishStatus: GuidePublishStatus;

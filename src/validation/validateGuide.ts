@@ -1,5 +1,4 @@
 import fs from 'fs';
-import { GuideToGenerate } from '../model/GuideToGenerate';
 import { validateUniqueUUIDs } from './validateUniqueUUIDs';
 import { throwValidationError } from './throwValidationError';
 import YAML from 'yaml';
@@ -32,11 +31,11 @@ export function validateGuide(guideFilePath: string) {
 
 export function validateGuides(srcDirPath: string) {
   const file = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
-  const guideJson = YAML.parse(file).guides as GuideToGenerate[];
+  const guideJson = YAML.parse(file).guides as string[];
 
   validateUniqueUUIDs(srcDirPath, guideJson);
   guideJson.forEach(guide => {
-    validateGuide(`${srcDirPath}/${guide.path}`);
+    validateGuide(`${srcDirPath}/${guide}`);
   });
   console.log(guideJson);
 }

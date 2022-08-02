@@ -12,6 +12,7 @@ created: "1658763127"
 #  projectGalaxyOatMintUrl:
 #  projectGalaxyOatPassingCount:
 guideType: onboarding
+key: course-contributor
 name: Course Contributor
 showIncorrectOnCompletion: true
 publishStatus: Live

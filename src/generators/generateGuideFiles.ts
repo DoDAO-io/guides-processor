@@ -1,33 +1,34 @@
 import dedent from 'dedent-js';
 import fs from 'fs';
-import {GuideToGenerate} from "../model/GuideToGenerate";
-import {generateGuide} from "./generateGuide";
+import { GitGuideModel } from '../model/GitGuideModel';
+import { generateGuide } from './generateGuide';
 import YAML from 'yaml';
-import {writeFileSync} from '../utils/writeFileSync';
+import { writeFileSync } from '../utils/writeFileSync';
 
 function generateGuidesTable(
   header: string,
   srcDirPath: string,
-  guidesToGenerate: GuideToGenerate[]
+  guidesToGenerate: string[]
 ) {
-
-  guidesToGenerate.forEach(
-    guide => generateGuide(header, srcDirPath, guide)
-  )
+  guidesToGenerate.forEach(guide => generateGuide(header, srcDirPath, guide));
 
   return guidesToGenerate
     .map((guide, index) => {
-      const fileLink = `[Link](generated/markdown/${guide.key}.md)`;
-      return `| ${index + 1}      | ${guide.key} |  ${fileLink} |`
+      const file = fs.readFileSync(`${srcDirPath}/${guide}`, 'utf8');
+      const guideJson = YAML.parse(file) as GitGuideModel;
+
+      const fileLink = `[Link](generated/markdown/${guideJson.key}.md)`;
+      return `| ${index + 1}      | ${guideJson.name} | ${
+        guideJson.content
+      } |  ${fileLink} |`;
     })
     .join('\n ');
-
 }
 
 function generateGuides(
   header: string,
   srcDirPath: string,
-  guidesToGenerate: GuideToGenerate[]
+  guidesToGenerate: string[]
 ) {
   // prettier-ignore
   const courseReadmeContents =
@@ -36,8 +37,8 @@ function generateGuides(
 
 ## Guides
 
-| S.No        | Title       |  Link  |
-| ----------- | ----------- |----------- |
+| S.No        | Title       |  Details  |  Link  |
+| ----------- | ----------- |----------- | ----------- |
 ${(generateGuidesTable(header, srcDirPath, guidesToGenerate))} 
 `;
 
@@ -49,11 +50,7 @@ function createDirectoriesIfNotExists(courseDirPath: string) {
   const markdown = `${courseDirPath}/../generated/markdown`;
   const json = `${courseDirPath}/../generated/json`;
 
-  const foldersToGenerate = [
-    generatedFolder,
-    markdown,
-    json
-  ];
+  const foldersToGenerate = [generatedFolder, markdown, json];
 
   foldersToGenerate.forEach(folder => {
     if (!fs.existsSync(folder)) {
@@ -68,7 +65,6 @@ export function generateGuideFiles(srcDirPath: string) {
 
   createDirectoriesIfNotExists(srcDirPath);
 
-  const guidesToGenerate = (YAML.parse(guidesFile).guides) as GuideToGenerate[];
+  const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
   generateGuides(header, srcDirPath, guidesToGenerate);
-
 }

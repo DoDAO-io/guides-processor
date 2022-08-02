@@ -28,6 +28,9 @@
     "guideType": {
       "type": "string"
     },
+    "key": {
+      "type": "string"
+    },
     "name": {
       "type": "string"
     },
@@ -55,6 +58,7 @@
     "content",
     "created",
     "guideType",
+    "key",
     "name",
     "showIncorrectOnCompletion",
     "steps",
