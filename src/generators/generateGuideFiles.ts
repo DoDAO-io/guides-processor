@@ -5,13 +5,7 @@ import { generateGuide } from './generateGuide';
 import YAML from 'yaml';
 import { writeFileSync } from '../utils/writeFileSync';
 
-function generateGuidesTable(
-  header: string,
-  srcDirPath: string,
-  guidesToGenerate: string[]
-) {
-  guidesToGenerate.forEach(guide => generateGuide(header, srcDirPath, guide));
-
+function generateGuidesTable(srcDirPath: string, guidesToGenerate: string[]) {
   return guidesToGenerate
     .map((guide, index) => {
       const file = fs.readFileSync(`${srcDirPath}/${guide}`, 'utf8');
@@ -27,9 +21,14 @@ function generateGuidesTable(
 
 function generateGuides(
   header: string,
+  footer: string,
   srcDirPath: string,
   guidesToGenerate: string[]
 ) {
+  guidesToGenerate.forEach(guide =>
+    generateGuide(header, footer, srcDirPath, guide)
+  );
+
   // prettier-ignore
   const courseReadmeContents =
     dedent`${header}
@@ -39,7 +38,10 @@ function generateGuides(
 
 | S.No        | Title       |  Details  |  Link  |
 | ----------- | ----------- |----------- | ----------- |
-${(generateGuidesTable(header, srcDirPath, guidesToGenerate))} 
+${(generateGuidesTable(srcDirPath, guidesToGenerate))}
+
+---
+${footer} 
 `;
 
   writeFileSync(`${srcDirPath}/../README.md`, courseReadmeContents);
@@ -62,9 +64,10 @@ function createDirectoriesIfNotExists(courseDirPath: string) {
 export function generateGuideFiles(srcDirPath: string) {
   const guidesFile = fs.readFileSync(`${srcDirPath}/guides.yaml`, 'utf8');
   const header = fs.readFileSync(`${srcDirPath}/guides-header.md`, 'utf8');
+  const footer = fs.readFileSync(`${srcDirPath}/guides-footer.md`, 'utf8');
 
   createDirectoriesIfNotExists(srcDirPath);
 
   const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
-  generateGuides(header, srcDirPath, guidesToGenerate);
+  generateGuides(header, footer, srcDirPath, guidesToGenerate);
 }

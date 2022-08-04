@@ -52,6 +52,7 @@ ${choicesMarkdown(question.answerKeys, question.choices)}
 
 export function generateGuide(
   header: string,
+  footer: string,
   srcDirPath: string,
   guideToGenerate: string
 ) {
@@ -76,7 +77,9 @@ ${step.stepItems.map(stepItem => generateStepItem(stepItem)).join('\n\n')}
 `;
   })
   .join('\n\n---')}
-    
+
+---
+${footer}    
    
 `;
 
