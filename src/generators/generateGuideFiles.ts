@@ -70,4 +70,13 @@ export function generateGuideFiles(srcDirPath: string) {
 
   const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
   generateGuides(header, footer, srcDirPath, guidesToGenerate);
+
+  writeFileSync(
+    `${srcDirPath}/../generated/json/guides.json`,
+    JSON.stringify(
+      guidesToGenerate.map(guide => guide.replace('.yaml', '.json')),
+      null,
+      2
+    )
+  );
 }
