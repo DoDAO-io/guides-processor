@@ -47,8 +47,10 @@ ${footer}
   writeFileSync(`${srcDirPath}/../README.md`, courseReadmeContents);
 }
 
-function createDirectoriesIfNotExists(courseDirPath: string) {
+function createDirectories(courseDirPath: string) {
   const generatedFolder = `${courseDirPath}/../generated`;
+  fs.rmSync(generatedFolder, { recursive: true, force: true });
+
   const markdown = `${courseDirPath}/../generated/markdown`;
   const json = `${courseDirPath}/../generated/json`;
 
@@ -66,7 +68,7 @@ export function generateGuideFiles(srcDirPath: string) {
   const header = fs.readFileSync(`${srcDirPath}/guides-header.md`, 'utf8');
   const footer = fs.readFileSync(`${srcDirPath}/guides-footer.md`, 'utf8');
 
-  createDirectoriesIfNotExists(srcDirPath);
+  createDirectories(srcDirPath);
 
   const guidesToGenerate = YAML.parse(guidesFile).guides as string[];
   generateGuides(header, footer, srcDirPath, guidesToGenerate);
