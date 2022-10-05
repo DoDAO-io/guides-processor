@@ -44,7 +44,7 @@
       "type": "string"
     },
     "socialShareImage": {
-      "type": "null"
+      "type": "string"
     },
     "thumbnail": {
       "type": "string"
@@ -63,7 +63,6 @@
     "showIncorrectOnCompletion",
     "steps",
     "publishStatus",
-    "socialShareImage",
     "thumbnail",
     "uuid"
   ],
