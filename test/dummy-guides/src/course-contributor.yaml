@@ -16,7 +16,6 @@ key: course-contributor
 name: Course Contributor
 showIncorrectOnCompletion: true
 publishStatus: Live
-socialShareImage:
 thumbnail: ipfs://QmNd8S5Z9T8cWv95UUjn5fYR1wU8nLWjeHzXoRC5oVcVe8
 uuid: 02103121-0601-4bcf-aea4-05effa366b5f
 steps:
