@@ -33,7 +33,9 @@
     },
     "required": [
       "name",
-      "uuid"
+      "uuid",
+      "content",
+      "stepItems"
     ],
     "additionalProperties": false
   }
